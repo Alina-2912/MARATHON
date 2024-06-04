@@ -8,12 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\foret.jpg" />
     <None Remove="img\marathone.jpg" />
     <None Remove="img\montagne.jpg" />
     <None Remove="img\obstacle.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\foret.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\marathone.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
