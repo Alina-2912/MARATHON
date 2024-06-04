@@ -71,14 +71,20 @@ namespace SAE_201_MARATHON
 
         private void Button_Connexion(object sender, RoutedEventArgs e)
         {
-          
             stackPanelConnexion.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Visible;
         }
 
         private void Confirmation_Pass() 
         {
-             
+            stackPanelConnexion.Visibility = Visibility.Visible;
+            RechercheCoureurs.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Deconnexion(object sender, RoutedEventArgs e)
+        {
+            stackPanelConnexion.Visibility= Visibility.Visible;
+            RechercheCourse.Visibility= Visibility.Hidden;
         }
     }
     

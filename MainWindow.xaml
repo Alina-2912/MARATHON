@@ -27,24 +27,58 @@
             VerticalAlignment="Top"
             Fill="#FF2CADFF"
             Stroke="Black" />
-        <StackPanel x:Name="stackPanelConnexion" HorizontalAlignment="Center" Height="261" VerticalAlignment="Center" Width="283" Visibility="Visible">
+        <StackPanel
+            x:Name="stackPanelConnexion"
+            Width="283"
+            Height="261"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Visible">
             <StackPanel.Background>
-                <ImageBrush ImageSource="/img/foret.jpg"/>
+                <ImageBrush ImageSource="/img/foret.jpg" />
             </StackPanel.Background>
-            <Label Content="Connexion" Height="43" Width="136" FontSize="24" Foreground="White" FontWeight="Bold" Margin="0,15,0,0" Background="#FF4D965F"/>
-            <Label Content="Login" Height="29" Background="#FFE0E0E0" FontSize="14" Margin="0,15,0,0" />
-            <TextBox Height="31" TextWrapping="Wrap" Text=""/>
-            <Label Content="Mot de passe" Height="30" Background="#FFDEDEDE" FontSize="14" />
-            <PasswordBox Height="34" x:FieldModifier="password"/>
-            <Button Content="Confirmer" Click="Button_Connexion" Height="37" Width="103" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,9,0,0"/>
+            <Label
+                Width="136"
+                Height="43"
+                Margin="0,15,0,0"
+                Background="#FF4D965F"
+                Content="Connexion"
+                FontSize="24"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Label
+                Height="29"
+                Margin="0,15,0,0"
+                Background="#FFE0E0E0"
+                Content="Login"
+                FontSize="14" />
+            <TextBox
+                Height="31"
+                Text=""
+                TextWrapping="Wrap" />
+            <Label
+                Height="30"
+                Background="#FFDEDEDE"
+                Content="Mot de passe"
+                FontSize="14" />
+            <PasswordBox Height="34" />
+            <Button
+                Width="103"
+                Height="37"
+                Margin="0,9,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="Button_Connexion"
+                Content="Se connecter" />
         </StackPanel>
         <StackPanel
             x:Name="RechercheCourse"
-            Margin="77,150,36,101"
+            Width="287"
+            Height="235"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Visibility="Hidden">
-            <Label Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" />
+            <Label Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,20,0,0" />
             <ComboBox x:Name="choixCourse">
                 <ComboBoxItem Content="Course 1" />
                 <ComboBoxItem Content="Course 2" />
@@ -52,23 +86,27 @@
             </ComboBox>
             <Label Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" />
             <DatePicker x:Name="choixDate" />
-            <Button
-                Width="83"
-                Height="30"
-                Margin="0,15,0,0"
-                HorizontalAlignment="Center"
-                Click="Button_Suivant_1"
-                Content="Suivant"
-                IsDefault="True" />
+            <Grid Height="74" HorizontalAlignment="Stretch">
+                <Button
+                    Width="83"
+                    Height="30"
+                    Click="Button_Suivant_1"
+                    Content="Suivant"
+                    IsDefault="True" Margin="180,22,24,22" />
+                <Button
+                    Height="30"
+                    Click="Button_Deconnexion"
+                    Content="Se deconnecter" Margin="10,22,165,22" />
+            </Grid>
+
         </StackPanel>
         <StackPanel
             x:Name="RechercheCoureurs"
             Grid.ColumnSpan="2"
             Width="338"
             Height="284"
-            Margin="220,116,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Visibility="Hidden">
             <Label Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
@@ -107,9 +145,8 @@
             Grid.ColumnSpan="2"
             Width="338"
             Height="256"
-            Margin="221,103,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Visibility="Hidden">
             <Label Content="Sélectionner le coureur" />
             <ComboBox>
@@ -143,9 +180,9 @@
             Grid.ColumnSpan="2"
             Width="360"
             Height="162"
-            Margin="0,150,0,0"
+            Margin="0,0,0,150"
             HorizontalAlignment="Center"
-            VerticalAlignment="Top"
+            VerticalAlignment="Center"
             Visibility="Hidden">
             <Label
                 HorizontalAlignment="Center"
