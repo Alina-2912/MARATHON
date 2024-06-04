@@ -66,9 +66,8 @@
             Grid.ColumnSpan="2"
             Width="338"
             Height="284"
-            Margin="220,116,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Visibility="Hidden">
             <Label Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
@@ -107,9 +106,8 @@
             Grid.ColumnSpan="2"
             Width="338"
             Height="256"
-            Margin="221,103,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Visibility="Hidden">
             <Label Content="Sélectionner le coureur" />
             <ComboBox>
@@ -143,10 +141,9 @@
             Grid.ColumnSpan="2"
             Width="360"
             Height="162"
-            Margin="0,150,0,0"
             HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Visibility="Hidden">
+            VerticalAlignment="Center"
+            Visibility="Hidden" Margin="0,0,0,150">
             <Label
                 HorizontalAlignment="Center"
                 Content="Montant total"
