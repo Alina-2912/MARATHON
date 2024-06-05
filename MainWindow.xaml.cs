@@ -29,7 +29,7 @@ namespace SAE_201_MARATHON
 
         /*    --------------------    BUTTONS      -------------------      */
 
-        private void Button_Connexion(object sender, RoutedEventArgs e)
+        public void ButtonConnexion(object sender, RoutedEventArgs e)
         {
             const string correctUsername = "imdapi";
             const string correctPassword = "password123";
@@ -37,6 +37,7 @@ namespace SAE_201_MARATHON
 
             string login = tbLogin.Text;
             string motDePasse = pswrdBox.Password;
+
 
             if (login == correctUsername && motDePasse == correctPassword)
             {
@@ -61,6 +62,14 @@ namespace SAE_201_MARATHON
                 MessageBox.Show("Identifiant ou mot de passe incorrect", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        //public void BouttonConnexionEnntrer(object sender, KeyEventArgs e)
+        //{
+        //    if (e.Key == Key.Enter)
+        //    {
+        //        butConnexion.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        //    }
+        //}
 
         private void Button_Suivant_1(object sender, RoutedEventArgs e)
         {
