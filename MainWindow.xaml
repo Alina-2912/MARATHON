@@ -80,15 +80,21 @@
             Width="288"
             Height="235"
             HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Visibility="Hidden" Margin="0,48,0,0" Grid.Row="1">
-            <Label Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,20,0,0" />
+            VerticalAlignment="Center"
+            Visibility="Hidden" Grid.Row="1">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
+                    <GradientStop Color="#7FD02121" Offset="0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Foreground="White" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="14" FontWeight="Bold" />
             <ComboBox x:Name="choixCourse">
                 <ComboBoxItem Content="Course 1" />
                 <ComboBoxItem Content="Course 2" />
                 <ComboBoxItem Content="Course 3" />
             </ComboBox>
-            <Label Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" />
+            <Label Foreground="White" Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" FontSize="14" FontWeight="Bold" />
             <DatePicker x:Name="choixDate" />
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
@@ -96,23 +102,28 @@
                     Height="30"
                     Click="Button_Suivant_1"
                     Content="Suivant"
-                    IsDefault="True" Margin="180,22,24,22" />
+                    IsDefault="True" Margin="180,22,24,22" FontSize="14" />
                 <Button
                     Height="30"
                     Click="Button_Deconnexion"
-                    Content="Se deconnecter" Margin="10,22,165,22" />
+                    Content="Se deconnecter" Margin="10,22,165,22" FontSize="14" />
             </Grid>
 
         </StackPanel>
         <StackPanel
             x:Name="RechercheCoureurs"
-
-            Visibility="Hidden" Grid.Row="1" Margin="10,0,10,0">
-            <Label Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" />
+            Visibility="Hidden" Grid.Row="1" Margin="50,20,30,20">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
+                    <GradientStop Color="#7FD02121" Offset="0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Foreground="White" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" FontWeight="Bold" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
-            <Label Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" />
+            <Label Foreground="White" Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" FontWeight="Bold" />
             <TextBox x:Name="tbVilleSelectionne" Text="{Binding Ville}" />
-            <Label Content="Selectionne la fédération" Target="{Binding ElementName=cbChoixFederation}" FontSize="14" />
+            <Label Foreground="White" Content="Selectionne la fédération" Target="{Binding ElementName=cbChoixFederation}" FontSize="14" FontWeight="Bold" />
             <ComboBox x:Name="cbChoixFederation" Text="{Binding ChoixFederation}">
                 <ComboBoxItem Content="Fédération Française de Football" />
                 <ComboBoxItem Content="Fédération Française de Rugby" />
@@ -123,13 +134,13 @@
                 <ComboBoxItem Content="Fédération Française de Tennis" />
                 <ComboBoxItem Content="Fédération Française de Ski" />
             </ComboBox>
-            <Label Content="Selectionner les coureurs" FontSize="14" />
+            <Label Content="Selectionner les coureurs" Foreground="White" FontSize="14" FontWeight="Bold" />
             <DataGrid
     x:Name="dgClients"
     MinHeight="150"
     AutoGenerateColumns="False"
     IsReadOnly="True"
-    ItemsSource="{Binding LesClients}" Height="117">
+    ItemsSource="{Binding LesClients}" Height="126" >
                 <DataGrid.Columns>
                     <DataGridTextColumn
 Width="30"
@@ -154,7 +165,7 @@ Header="Fédération" />
                 </DataGrid.Columns>
 
             </DataGrid>
-            <Grid Height="59" HorizontalAlignment="Stretch" Width="334">
+            <Grid Height="60" HorizontalAlignment="Stretch" Width="334">
                 <Button
                     Height="30"
                     Margin="220,13,32,16"
@@ -171,20 +182,27 @@ Header="Fédération" />
         <StackPanel
             x:Name="SelectionCoureurs"
             Grid.ColumnSpan="2"
-            Width="338"
-            Height="256"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Visibility="Hidden" Margin="231,37,0,0" Grid.Row="1">
-            <Label Content="Sélectionner le coureur" />
+            Width="360"
+            Height="285"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Hidden" Grid.Row="1">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
+                    <GradientStop Color="#7FD02121" Offset="0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Foreground="White" Content="Sélectionner le coureur" FontSize="14" FontWeight="Bold" />
+
             <ComboBox>
                 <ComboBoxItem Content="" />
                 <ComboBoxItem Content="" />
                 <ComboBoxItem Content="" />
             </ComboBox>
-            <Label Content="Sélectionner la date" />
+            <Label Foreground="White" Content="Sélectionner la date" FontSize="14" FontWeight="Bold" />
             <DatePicker />
-            <Label Content="Saisir des numéros de téléphones d’amis (pas obligatoire) " />
+            <Label Foreground="White" Content="Saisir des numéros de téléphones d’amis (pas obligatoire) " FontSize="14" FontWeight="Bold" />
             <TextBox Margin="0,3,0,0" />
             <TextBox Margin="0,3,0,0" />
             <TextBox Margin="0,3,0,0" />
@@ -194,13 +212,13 @@ Header="Fédération" />
                     Height="30"
                     Margin="220,7,43,10"
                     Click="Button_Suivant_3"
-                    Content="Suivant" />
+                    Content="Suivant" FontSize="14" />
                 <Button
                     Width="75"
                     Height="30"
                     Margin="28,7,217,15"
                     Click="Button_Precedent_2"
-                    Content="Precedent" />
+                    Content="Precedent" FontSize="14" />
             </Grid>
         </StackPanel>
         <StackPanel
@@ -208,13 +226,20 @@ Header="Fédération" />
             Grid.ColumnSpan="2"
             Width="360"
             Height="162"
-            Margin="220,9,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
+            Margin="0,11,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
             Visibility="Hidden" Grid.Row="1">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
+                    <GradientStop Color="#7FD02121" Offset="0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
             <Label
                 HorizontalAlignment="Center"
                 Content="Montant total"
+                Foreground="White"
                 FontSize="16"
                 FontWeight="Bold" />
             <Label
@@ -228,13 +253,13 @@ Header="Fédération" />
                     Height="30"
                     Margin="205,18,27,26"
                     Click="Button_Confirmer"
-                    Content="Confirmer l'inscription" />
+                    Content="Confirmer l'inscription" FontSize="14" />
                 <Button
                     Width="75"
                     Height="30"
                     Margin="28,7,217,15"
                     Click="Button_Precedent_3"
-                    Content="Precedent" />
+                    Content="Precedent" FontSize="14" />
             </Grid>
         </StackPanel>
         <Grid
@@ -336,7 +361,7 @@ Header="Fédération" />
                Visibility="Hidden"
                MouseLeftButtonUp="selectionCoureursLabelClick" FontSize="14"
                />
-        <StackPanel x:Name="SelectionCoureurs2" 
+        <StackPanel x:Name="ListeRechercheCoureurs" 
             
             Visibility="Hidden" 
             Grid.Column="1" 
