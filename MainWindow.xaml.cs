@@ -33,6 +33,10 @@ namespace SAE_201_MARATHON
             stackPanelConnexion.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Visible;
 
+            lbConnexion.Visibility = Visibility.Visible;
+            labelRechercheCourse.Visibility = Visibility.Visible;
+            labelSelectionCoureurs.Visibility = Visibility.Visible;
+
         }
 
         private void Button_Suivant_1(object sender, RoutedEventArgs e)
@@ -99,6 +103,9 @@ namespace SAE_201_MARATHON
 
             lbConnexion.Background = Brushes.GreenYellow;
             lbConnexion.TextDecorations = TextDecorations.Underline;
+
+            labelRechercheCourse.Visibility = Visibility.Hidden;
+            labelSelectionCoureurs.Visibility = Visibility.Hidden;
         }
         private void rechercherCourseLabelClick(object sender, MouseButtonEventArgs e)
         {
@@ -113,6 +120,8 @@ namespace SAE_201_MARATHON
 
             labelRechercheCourse.Background = Brushes.GreenYellow;
             labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+
+
 
         }
 
