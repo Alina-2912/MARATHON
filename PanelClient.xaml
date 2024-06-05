@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="SAE_201_MARATHON.PanelClient"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SAE_201_MARATHON"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel x:Name="mainPanel" Margin="60,20,60,20" MinWidth="200"  >
+
+
+
+        <Label Content="I_d" Target="{Binding ElementName=tbId, Mode=OneWay}" />
+        <TextBox x:Name="tbId" TextWrapping="Wrap" Text="{Binding Path=Id, UpdateSourceTrigger=Explicit, Mode=TwoWay,ValidatesOnExceptions=True}"   />
+
+        <Label Content="N_om" Target="{Binding ElementName=tbNom, Mode=OneWay}" />
+        <TextBox x:Name="tbNom" TextWrapping="Wrap" Text="{Binding Path=Nom, UpdateSourceTrigger=Explicit, Mode=TwoWay,ValidatesOnExceptions=True}"   />
+
+
+        <Label Content="_Prenom" Target="{Binding ElementName=tbPrenom}"/>
+        <TextBox x:Name="tbPrenom" TextWrapping="Wrap" Text="{Binding Prenom, UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True}"   />
+
+        <Label Content="_Ville" Target="{Binding ElementName=tbVille}"/>
+        <TextBox x:Name="tbVille" TextWrapping="Wrap" Text="{Binding Email, UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True}" />
+
+        <Label Content="_Fédération" Target="{Binding ElementName=tbFederation}"/>
+        <TextBox x:Name="tbFederation" TextWrapping="Wrap" Text="{Binding Telephone, UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True}" />
+
+
+
+    </StackPanel>
+</UserControl>

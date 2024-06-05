@@ -6,13 +6,13 @@
     xmlns:local="clr-namespace:SAE_201_MARATHON"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow" 
-    Width="800"
-    Height="450"
+    Width="850"
+    Height="500"
     mc:Ignorable="d">
     <Window.DataContext>
         <local:Coureur x:Name="c" />
     </Window.DataContext>
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="26*" />
             <RowDefinition Height="191*"/>
@@ -24,14 +24,14 @@
         <Rectangle
             Grid.ColumnSpan="2"
             Fill="#FF2CADFF"
-            Stroke="Black" />
+            Stroke="Black"  />
         <StackPanel
             x:Name="stackPanelConnexion"
             Width="284"
             Height="261"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Visibility="Visible" Margin="0,35,0,0" Grid.Row="1">
+            Visibility="Hidden" Margin="0,35,0,0" Grid.Row="1">
             <StackPanel.Background>
                 <ImageBrush ImageSource="/img/foret.jpg" />
             </StackPanel.Background>
@@ -101,9 +101,8 @@
         </StackPanel>
         <StackPanel
             x:Name="RechercheCoureurs"
-            Width="354"
-            Height="373"
-            Visibility="Hidden" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,14,0,0">
+
+            Visibility="Visible" Grid.Row="1" Margin="10,0,10,0">
             <Label Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
             <Label Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" />
@@ -120,7 +119,36 @@
                 <ComboBoxItem Content="Fédération Française de Ski" />
             </ComboBox>
             <Label Content="Selectionner les coureurs" FontSize="14" />
-            <ListBox Height="100" />
+            <DataGrid
+    x:Name="dgClients"
+    MinHeight="150"
+    AutoGenerateColumns="False"
+    IsReadOnly="True"
+    ItemsSource="{Binding LesClients}" Height="117">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+Width="30"
+Binding="{Binding Nom}"
+Header="Id" />
+                    <DataGridTextColumn
+            Width="80"
+            Binding="{Binding Nom}"
+            Header="Nom" />
+                    <DataGridTextColumn
+            Width="80"
+            Binding="{Binding Prenom}"
+            Header="Prenom" />
+                    <DataGridTextColumn
+            Width="80"
+            Binding="{Binding Telephone}"
+            Header="Ville" />
+                    <DataGridTextColumn
+Width="80"
+Binding="{Binding Telephone}"
+Header="Fédération" />
+                </DataGrid.Columns>
+
+            </DataGrid>
             <Grid Height="59" HorizontalAlignment="Stretch" Width="334">
                 <Button
                     Height="30"
@@ -205,7 +233,7 @@
             </Grid>
         </StackPanel>
         <Grid
-            Visibility="Visible"
+            Visibility="Hidden"
             x:Name="imgCourse"
             Width="360"
             Height="362"
@@ -297,9 +325,17 @@
                Visibility="Hidden"
                MouseLeftButtonUp="selectionCoureursLabelClick" FontSize="14"
                />
-        <StackPanel Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Height="321" Margin="19,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="326">
-            <Label Content="Nom " Height="37" FontSize="14" 
-                   />
+        <StackPanel 
+            
+            Visibility="Visible" 
+            Grid.Column="1" 
+ 
+            Margin="10,0,10,0" 
+            Grid.Row="1" 
+ >
+
+            <local:PanelClient x:Name="UCPanelClient"  IsEnabled="False" DataContext="{Binding SelectedItem, ElementName=dgClients}" />
+
         </StackPanel>
 
     </Grid>
