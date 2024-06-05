@@ -8,10 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
     <None Remove="img\ajouter.png" />
     <None Remove="img\foret.jpg" />
     <None Remove="img\marathone.jpg" />
     <None Remove="img\modifier.png" />
+=======
+    <None Remove="img\background.jpg" />
+    <None Remove="img\courseDeux.jpg" />
+    <None Remove="img\courseTrois.jpg" />
+    <None Remove="img\foret.jpg" />
+    <None Remove="img\marathone.jpg" />
+    <None Remove="img\marathonRoute.jpg" />
+>>>>>>> Stashed changes
     <None Remove="img\montagne.jpg" />
     <None Remove="img\obstacle.jpg" />
     <None Remove="img\rechercher.png" />
@@ -19,8 +28,19 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
     <Resource Include="img\ajouter.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+=======
+    <Resource Include="img\background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\courseDeux.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\courseTrois.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+>>>>>>> Stashed changes
     </Resource>
     <Resource Include="img\foret.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
