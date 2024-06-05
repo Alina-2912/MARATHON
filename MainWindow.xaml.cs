@@ -99,6 +99,7 @@ namespace SAE_201_MARATHON
             SelectionCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             imgCourse.Visibility = Visibility.Visible;
+
         }
 
 
