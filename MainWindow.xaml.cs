@@ -30,21 +30,34 @@ namespace SAE_201_MARATHON
 
         private void Button_Connexion(object sender, RoutedEventArgs e)
         {
-            stackPanelConnexion.Visibility = Visibility.Hidden;
-            RechercheCourse.Visibility = Visibility.Visible;
+            const string correctUsername = "imdapi";
+            const string correctPassword = "password123";
 
-            lbConnexion.Visibility = Visibility.Visible;
-            labelRechercheCourse.Visibility = Visibility.Visible;
-            labelSelectionCoureurs.Visibility = Visibility.Visible;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
-            labelSelectionCoureurs.Background = Brushes.LawnGreen;
-            labelSelectionCoureurs.TextDecorations = null;
+            string login = tbLogin.Text;
+            string motDePasse = pswrdBox.Password;
 
-            labelRechercheCourse.Background = Brushes.GreenYellow;
-            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+            if (login == correctUsername && motDePasse == correctPassword)
+            {
+                stackPanelConnexion.Visibility = Visibility.Hidden;
+                RechercheCourse.Visibility = Visibility.Visible;
 
+                lbConnexion.Visibility = Visibility.Visible;
+                labelRechercheCourse.Visibility = Visibility.Visible;
+                labelSelectionCoureurs.Visibility = Visibility.Visible;
+
+                lbConnexion.Background = Brushes.LawnGreen;
+                lbConnexion.TextDecorations = null;
+                labelSelectionCoureurs.Background = Brushes.LawnGreen;
+                labelSelectionCoureurs.TextDecorations = null;
+
+                labelRechercheCourse.Background = Brushes.GreenYellow;
+                labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+            }
+            else
+            {
+                MessageBox.Show("Identifiant ou mot de passe incorrect", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Button_Suivant_1(object sender, RoutedEventArgs e)

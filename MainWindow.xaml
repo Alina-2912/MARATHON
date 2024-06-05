@@ -50,7 +50,7 @@
                 Background="#FFE0E0E0"
                 Content="Login"
                 FontSize="14" />
-            <TextBox
+            <TextBox x:Name="tbLogin"
                 Height="31"
                 Text=""
                 TextWrapping="Wrap" />
@@ -59,7 +59,7 @@
                 Background="#FFDEDEDE"
                 Content="Mot de passe"
                 FontSize="14" />
-            <PasswordBox Height="34" />
+            <PasswordBox x:Name="pswrdBox" Height="34" />
             <Button
                 Width="103"
                 Height="37"
