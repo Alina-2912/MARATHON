@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAE_201_MARATHON")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d89e1c8f14566e464e233bfe9fbfc047189ffaca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+361597f04ec635917d6d6075e982a97b99d05680")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAE_201_MARATHON")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAE_201_MARATHON")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

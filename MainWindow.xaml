@@ -107,19 +107,13 @@
         </StackPanel>
         <StackPanel
             x:Name="RechercheCoureurs"
-            Visibility="Hidden" Grid.Row="1" Margin="50,20,30,20">
-            <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
-                    <GradientStop Color="#7FD02121" Offset="0"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
-            <Label Foreground="White" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" FontWeight="Bold" />
-            <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
-            <Label Foreground="White" Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" FontWeight="Bold" />
-            <TextBox x:Name="tbVilleSelectionne" Text="{Binding Ville}" />
-            <Label Foreground="White" Content="Selectionne la fédération" Target="{Binding ElementName=cbChoixFederation}" FontSize="14" FontWeight="Bold" />
-            <ComboBox x:Name="cbChoixFederation" Text="{Binding ChoixFederation}">
+            Visibility="Hidden" Grid.Row="1" Margin="50,20,30,20" Background="White">
+            <Label Foreground="Black" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" Background="#FFC3C3C3" />
+            <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" FontSize="14" />
+            <Label Foreground="Black" Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" Background="#FFCCCCCC" />
+            <TextBox x:Name="tbVilleSelectionne" Text="{Binding Ville}" FontSize="14" />
+            <Label Foreground="Black" Content="Selectionne la fédération" Target="{Binding ElementName=cbChoixFederation}" FontSize="14" Background="Silver" />
+            <ComboBox x:Name="cbChoixFederation" Text="{Binding ChoixFederation}" FontSize="14">
                 <ComboBoxItem Content="Fédération Française de Football" />
                 <ComboBoxItem Content="Fédération Française de Rugby" />
                 <ComboBoxItem Content="Fédération Française d'Athlétisme" />
@@ -129,34 +123,37 @@
                 <ComboBoxItem Content="Fédération Française de Tennis" />
                 <ComboBoxItem Content="Fédération Française de Ski" />
             </ComboBox>
-            <Label Content="Selectionner les coureurs" Foreground="White" FontSize="14" FontWeight="Bold" />
+            <Label 
+                Content="Selectionner les coureurs" 
+                Foreground="Black" 
+                FontSize="14" Background="#FFD0CDCD" />
             <DataGrid
-    x:Name="dgClients"
-    MinHeight="150"
-    AutoGenerateColumns="False"
-    IsReadOnly="True"
-    ItemsSource="{Binding LesClients}" Height="126" >
+                x:Name="dgClients"
+                MinHeight="150"
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                ItemsSource="{Binding LesClients}" Height="126" >
                 <DataGrid.Columns>
                     <DataGridTextColumn
-Width="30"
-Binding="{Binding Nom}"
-Header="Id" />
+                        Width="30"
+                        Binding="{Binding Nom}"
+                        Header="Id" />
                     <DataGridTextColumn
-            Width="80"
-            Binding="{Binding Nom}"
-            Header="Nom" />
+                        Width="80"
+                        Binding="{Binding Nom}"
+                        Header="Nom" />
                     <DataGridTextColumn
-            Width="80"
-            Binding="{Binding Prenom}"
-            Header="Prenom" />
+                        Width="80"
+                        Binding="{Binding Prenom}"
+                        Header="Prenom" />
                     <DataGridTextColumn
-            Width="80"
-            Binding="{Binding Telephone}"
-            Header="Ville" />
+                        Width="80"
+                        Binding="{Binding Telephone}"
+                        Header="Ville" />
                     <DataGridTextColumn
-Width="80"
-Binding="{Binding Telephone}"
-Header="Fédération" />
+                        Width="80"
+                        Binding="{Binding Telephone}"
+                        Header="Fédération" />
                 </DataGrid.Columns>
 
             </DataGrid>
@@ -165,13 +162,13 @@ Header="Fédération" />
                     Height="30"
                     Margin="220,13,32,16"
                     Click="Button_Suivant_2"
-                    Content="Suivant" />
+                    Content="Suivant" FontSize="14" />
                 <Button
                     Width="75"
                     Height="30"
                     Margin="28,7,217,15"
                     Click="Button_Precedent_1"
-                    Content="Precedent" />
+                    Content="Precedent" FontSize="14" />
             </Grid>
         </StackPanel>
         <StackPanel
@@ -219,19 +216,13 @@ Header="Fédération" />
             Margin="0,11,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Visibility="Hidden" Grid.Row="1">
-            <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
-                    <GradientStop Color="#7FD02121" Offset="0"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
+            Visibility="Hidden" Grid.Row="1" Background="White">
+
             <Label
                 HorizontalAlignment="Center"
                 Content="Montant total"
-                Foreground="White"
-                FontSize="16"
-                FontWeight="Bold" />
+                Foreground="Black"
+                FontSize="16" FontWeight="Bold" />
             <Label
                 Height="19"
                 Margin="0,2,0,0"
@@ -338,8 +329,8 @@ Header="Fédération" />
                Background="LawnGreen"
                Cursor="Hand"
                MouseLeftButtonUp="rechercherCourseLabelClick" FontSize="14" Margin="146,0,0,0"/>
-        <TextBlock x:Name="labelSelectionCoureurs" 
-               Text="Selectionner les coureurs" 
+        <TextBlock x:Name="labelRechercheCoureurs" 
+               Text="Rechercher les coureurs" 
                HorizontalAlignment="Left" 
                Height="32" Margin="301,0,0,0" 
                VerticalAlignment="Center" 
@@ -349,13 +340,12 @@ Header="Fédération" />
                Grid.ColumnSpan="2"
                Cursor="Hand"
                Visibility="Hidden"
-               MouseLeftButtonUp="selectionCoureursLabelClick" FontSize="14"
+               MouseLeftButtonUp="rechercherCoureursLabelClick" FontSize="14"
                />
         <StackPanel x:Name="ListeRechercheCoureurs" 
             
             Visibility="Hidden" 
             Grid.Column="1" 
- 
             Margin="10,0,10,0" 
             Grid.Row="1" 
             >
