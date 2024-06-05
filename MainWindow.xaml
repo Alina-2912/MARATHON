@@ -31,7 +31,7 @@
             Height="261"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Visibility="Hidden" Margin="0,35,0,0" Grid.Row="1">
+            Visibility="Visible" Margin="0,35,0,0" Grid.Row="1">
             <StackPanel.Background>
                 <ImageBrush ImageSource="/img/foret.jpg" />
             </StackPanel.Background>
@@ -103,7 +103,7 @@
             x:Name="RechercheCoureurs"
             Width="354"
             Height="373"
-            Visibility="Visible" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            Visibility="Hidden" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,14,0,0">
             <Label Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
             <Label Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" />
@@ -205,7 +205,7 @@
             </Grid>
         </StackPanel>
         <Grid
-            Visibility="Hidden"
+            Visibility="Visible"
             x:Name="imgCourse"
             Width="360"
             Height="362"
@@ -297,8 +297,9 @@
                Visibility="Hidden"
                MouseLeftButtonUp="selectionCoureursLabelClick" FontSize="14"
                />
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="309" Margin="19,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="298">
-            <Label Content="Nom " Height="37" FontSize="14" />
+        <StackPanel Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Height="321" Margin="19,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="326">
+            <Label Content="Nom " Height="37" FontSize="14" 
+                   />
         </StackPanel>
 
     </Grid>
