@@ -37,6 +37,8 @@ namespace SAE_201_MARATHON
             labelRechercheCourse.Visibility = Visibility.Visible;
             labelSelectionCoureurs.Visibility = Visibility.Visible;
 
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
         }
 
         private void Button_Suivant_1(object sender, RoutedEventArgs e)
@@ -106,6 +108,11 @@ namespace SAE_201_MARATHON
 
             labelRechercheCourse.Visibility = Visibility.Hidden;
             labelSelectionCoureurs.Visibility = Visibility.Hidden;
+
+            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.TextDecorations = null;
+            labelSelectionCoureurs.TextDecorations = null;
+            labelSelectionCoureurs.Background = Brushes.LawnGreen;
         }
         private void rechercherCourseLabelClick(object sender, MouseButtonEventArgs e)
         {
@@ -121,7 +128,10 @@ namespace SAE_201_MARATHON
             labelRechercheCourse.Background = Brushes.GreenYellow;
             labelRechercheCourse.TextDecorations = TextDecorations.Underline;
 
-
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+            labelSelectionCoureurs.TextDecorations = null;
+            labelSelectionCoureurs.Background = Brushes.LawnGreen;
 
         }
 
@@ -138,6 +148,11 @@ namespace SAE_201_MARATHON
 
             labelSelectionCoureurs.Background = Brushes.GreenYellow;
             labelSelectionCoureurs.TextDecorations = TextDecorations.Underline;
+
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+            labelRechercheCourse.TextDecorations = null;
+            labelRechercheCourse.Background = Brushes.LawnGreen;
         }
         private void controlLabels()
         {
