@@ -64,6 +64,8 @@ namespace SAE_201_MARATHON
         {
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Visible;
+            ListeRechercheCoureurs.Visibility = Visibility.Visible;
+
             imgCourse.Visibility = Visibility.Hidden;
 
             labelSelectionCoureurs.Background = Brushes.GreenYellow;
@@ -78,6 +80,7 @@ namespace SAE_201_MARATHON
         private void Button_Suivant_2(object sender, RoutedEventArgs e)
         {
             RechercheCoureurs.Visibility = Visibility.Hidden;
+            ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             SelectionCoureurs.Visibility = Visibility.Visible;
         }
 
@@ -85,6 +88,7 @@ namespace SAE_201_MARATHON
         {
             RechercheCourse.Visibility = Visibility.Visible;
             RechercheCoureurs.Visibility = Visibility.Hidden;
+            ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             imgCourse.Visibility = Visibility.Visible;
 
             labelRechercheCourse.Background = Brushes.GreenYellow;
@@ -99,6 +103,7 @@ namespace SAE_201_MARATHON
         private void Button_Precedent_2(object sender, RoutedEventArgs e)
         {
             RechercheCoureurs.Visibility = Visibility.Visible;
+            ListeRechercheCoureurs.Visibility = Visibility.Visible;
             SelectionCoureurs.Visibility = Visibility.Hidden;
         }
         private void Button_Suivant_3(object sender, RoutedEventArgs e)
@@ -121,8 +126,8 @@ namespace SAE_201_MARATHON
 
         private void Button_Deconnexion(object sender, RoutedEventArgs e)
         {
-            stackPanelConnexion.Visibility= Visibility.Visible;
-            RechercheCourse.Visibility= Visibility.Hidden;
+            stackPanelConnexion.Visibility = Visibility.Visible;
+            RechercheCourse.Visibility = Visibility.Hidden;
 
             lbConnexion.Background = Brushes.GreenYellow;
             lbConnexion.TextDecorations = TextDecorations.Underline;
@@ -141,12 +146,12 @@ namespace SAE_201_MARATHON
         }
 
         /*    --------------------    LABELS      -------------------      */
-        private void connexionLabelClick (object sender, MouseButtonEventArgs e) 
+        private void connexionLabelClick(object sender, MouseButtonEventArgs e)
         {
             stackPanelConnexion.Visibility = Visibility.Visible;
 
             RechercheCourse.Visibility = Visibility.Hidden;
-            RechercheCoureurs.Visibility= Visibility.Hidden;
+            RechercheCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             SelectionCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
@@ -169,7 +174,7 @@ namespace SAE_201_MARATHON
         private void rechercherCourseLabelClick(object sender, MouseButtonEventArgs e)
         {
             RechercheCourse.Visibility = Visibility.Visible;
-            
+
             stackPanelConnexion.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
@@ -190,7 +195,7 @@ namespace SAE_201_MARATHON
         private void selectionCoureursLabelClick(object sender, MouseButtonEventArgs e)
         {
             SelectionCoureurs.Visibility = Visibility.Visible;
-            
+
             RechercheCourse.Visibility = Visibility.Hidden;
             stackPanelConnexion.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Hidden;
@@ -231,7 +236,7 @@ namespace SAE_201_MARATHON
 
         }
     }
-    
 
-    
+
+
 }
