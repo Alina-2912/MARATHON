@@ -134,6 +134,10 @@ namespace SAE_201_MARATHON
 
             tbLogin.Text = string.Empty;
             pswrdBox.Password = string.Empty;
+
+            lbConnexion.Visibility = Visibility.Visible;
+            labelRechercheCourse.Visibility = Visibility.Hidden;
+            labelSelectionCoureurs.Visibility = Visibility.Hidden;
         }
 
         /*    --------------------    LABELS      -------------------      */
@@ -158,6 +162,9 @@ namespace SAE_201_MARATHON
             labelRechercheCourse.TextDecorations = null;
             labelSelectionCoureurs.TextDecorations = null;
             labelSelectionCoureurs.Background = Brushes.LawnGreen;
+
+            tbLogin.Text = string.Empty;
+            pswrdBox.Password = string.Empty;
         }
         private void rechercherCourseLabelClick(object sender, MouseButtonEventArgs e)
         {
