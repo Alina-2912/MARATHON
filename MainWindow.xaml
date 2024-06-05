@@ -8,6 +8,7 @@
     Title="MainWindow" 
     Width="850"
     Height="500"
+    WindowState="Maximized"
     mc:Ignorable="d">
     <Window.Background>
         <ImageBrush ImageSource="/img/background.jpg" Stretch="Fill" />
@@ -242,6 +243,12 @@ Header="Fédération" />
             Width="360"
             Height="362"
             Margin="24,11,16,9" Grid.Column="1" Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
+                    <GradientStop Color="#7FD02121" Offset="0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -256,7 +263,7 @@ Header="Fédération" />
                 Content="Course 1"
                 FontFamily="Lucida Sans Typewriter"
                 FontSize="16"
-                FontWeight="Bold" />
+                FontWeight="Bold" Foreground="White" />
             <Label
                 Grid.Row="1"
                 Width="93"
@@ -267,7 +274,7 @@ Header="Fédération" />
                 Content="Course 2"
                 FontFamily="Lucida Sans Typewriter"
                 FontSize="16"
-                FontWeight="Bold" />
+                FontWeight="Bold" Foreground="White" />
             <Label
                 Grid.Row="2"
                 Width="93"
@@ -278,7 +285,7 @@ Header="Fédération" />
                 Content="Course 3"
                 FontFamily="Lucida Sans Typewriter"
                 FontSize="16"
-                FontWeight="Bold" />
+                FontWeight="Bold" Foreground="White" />
             <Image
                 Margin="136,0,25,3"
                 Source="/img/marathone.jpg"
