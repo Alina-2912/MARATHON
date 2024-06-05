@@ -8,17 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\ajouter.png" />
     <None Remove="img\foret.jpg" />
     <None Remove="img\marathone.jpg" />
+    <None Remove="img\modifier.png" />
     <None Remove="img\montagne.jpg" />
     <None Remove="img\obstacle.jpg" />
+    <None Remove="img\rechercher.png" />
+    <None Remove="img\supprimer.png" />
+    <None Remove="modifier.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="img\ajouter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\foret.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\marathone.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\modifier.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\montagne.jpg">
@@ -27,6 +38,13 @@
     <Resource Include="img\obstacle.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="img\rechercher.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\supprimer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="modifier.png" />
   </ItemGroup>
 
 </Project>

@@ -31,7 +31,7 @@
             Height="261"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Visibility="Hidden" Margin="0,35,0,0" Grid.Row="1">
+            Visibility="Visible" Margin="0,35,0,0" Grid.Row="1">
             <StackPanel.Background>
                 <ImageBrush ImageSource="/img/foret.jpg" />
             </StackPanel.Background>
@@ -102,7 +102,7 @@
         <StackPanel
             x:Name="RechercheCoureurs"
 
-            Visibility="Visible" Grid.Row="1" Margin="10,0,10,0">
+            Visibility="Hidden" Grid.Row="1" Margin="10,0,10,0">
             <Label Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
             <Label Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" />
@@ -233,7 +233,7 @@ Header="Fédération" />
             </Grid>
         </StackPanel>
         <Grid
-            Visibility="Hidden"
+            Visibility="Visible"
             x:Name="imgCourse"
             Width="360"
             Height="362"
@@ -325,17 +325,36 @@ Header="Fédération" />
                Visibility="Hidden"
                MouseLeftButtonUp="selectionCoureursLabelClick" FontSize="14"
                />
-        <StackPanel 
+        <StackPanel x:Name="SelectionCoureurs2" 
             
-            Visibility="Visible" 
+            Visibility="Hidden" 
             Grid.Column="1" 
  
             Margin="10,0,10,0" 
             Grid.Row="1" 
- >
+            >
+            <local:PanelClient x:Name="UCPanelClient"  IsEnabled="False" DataContext="{Binding SelectedItem, ElementName=dgClients}" Height="283" />
+            <StackPanel  Grid.Column="1"   Width="110"   Orientation="Horizontal" HorizontalAlignment="Center"   >
+                <Button x:Name="butModifier" ToolTip="Modifier le département selectionné"  Width="30" Height="30" Click="butModifier_Click"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img/modifier.png"/>
+                    </Button.Background>
 
-            <local:PanelClient x:Name="UCPanelClient"  IsEnabled="False" DataContext="{Binding SelectedItem, ElementName=dgClients}" />
+                </Button>
+                <Button x:Name="butSupprimer"  ToolTip="Supprimer le département selectionné" Margin="10,0,0,0" Width="30" Height="30" Click="butSupprimer_Click" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img/supprimer.png"/>
+                    </Button.Background>
 
+                </Button>
+                <Button x:Name="butAjouter" ToolTip="Ajouter un nouveau département" Margin="10,0,0,0" Width="30" Height="30" Click="butAjouter_Click" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img/ajouter.png"/>
+                    </Button.Background>
+
+                </Button>
+
+            </StackPanel>
         </StackPanel>
 
     </Grid>
