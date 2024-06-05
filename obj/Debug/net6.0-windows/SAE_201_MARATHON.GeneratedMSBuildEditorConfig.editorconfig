@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SAE_201_MARATHON
-build_property.ProjectDir = D:\Alina\Codes\Nouveau dossier\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\

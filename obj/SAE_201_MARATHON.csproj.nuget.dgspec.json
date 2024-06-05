@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj": {}
+    "D:\\downloads sd card\\C#\\IUT\\s2sae\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {}
   },
   "projects": {
-    "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj": {
+    "D:\\downloads sd card\\C#\\IUT\\s2sae\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj",
+        "projectUniqueName": "D:\\downloads sd card\\C#\\IUT\\s2sae\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
         "projectName": "SAE_201_MARATHON",
-        "projectPath": "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj",
-        "packagesPath": "C:\\Users\\dvorn\\.nuget\\packages\\",
-        "outputPath": "D:\\Alina\\Codes\\Nouveau dossier\\obj\\",
+        "projectPath": "D:\\downloads sd card\\C#\\IUT\\s2sae\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
+        "packagesPath": "C:\\Users\\malak\\.nuget\\packages\\",
+        "outputPath": "D:\\downloads sd card\\C#\\IUT\\s2sae\\SAE_201_MARATHON\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\dvorn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\malak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

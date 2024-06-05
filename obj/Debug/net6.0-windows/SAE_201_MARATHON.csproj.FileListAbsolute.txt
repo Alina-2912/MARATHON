@@ -70,3 +70,26 @@ D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\refint\SAE_201_MARATHON.
 D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.pdb
 D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.genruntimeconfig.cache
 D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\ref\SAE_201_MARATHON.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\SAE_201_MARATHON.exe
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\SAE_201_MARATHON.deps.json
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\SAE_201_MARATHON.runtimeconfig.json
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\SAE_201_MARATHON.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\SAE_201_MARATHON.pdb
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\PanelClient.g.cs
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\App.g.cs
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON_MarkupCompile.cache
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON_MarkupCompile.lref
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\MainWindow.baml
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\PanelClient.baml
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.g.resources
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.GeneratedMSBuildEditorConfig.editorconfig
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.AssemblyInfoInputs.cache
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.AssemblyInfo.cs
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.csproj.CoreCompileInputs.cache
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\refint\SAE_201_MARATHON.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.pdb
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.genruntimeconfig.cache
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\ref\SAE_201_MARATHON.dll
