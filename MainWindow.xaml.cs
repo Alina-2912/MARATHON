@@ -24,7 +24,8 @@ namespace SAE_201_MARATHON
         {
             InitializeComponent();
             
-    }
+        }
+        /*    --------------------    BUTTONS      -------------------      */
 
         private void Button_Suivant_1(object sender, RoutedEventArgs e)
         {
@@ -86,6 +87,18 @@ namespace SAE_201_MARATHON
             stackPanelConnexion.Visibility= Visibility.Visible;
             RechercheCourse.Visibility= Visibility.Hidden;
         }
+
+        /*    --------------------    LABELS      -------------------      */
+        private void connexionLabelClick (object sender, MouseButtonEventArgs e) 
+        {
+        
+        
+        }
+
+
+
+
+
     }
     
 

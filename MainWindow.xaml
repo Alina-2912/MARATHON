@@ -14,7 +14,8 @@
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="26*" />
+            <RowDefinition Height="191*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -22,18 +23,15 @@
         </Grid.ColumnDefinitions>
         <Rectangle
             Grid.ColumnSpan="2"
-            Height="48"
-            Margin="-1,0,0,0"
-            VerticalAlignment="Top"
             Fill="#FF2CADFF"
             Stroke="Black" />
         <StackPanel
             x:Name="stackPanelConnexion"
-            Width="283"
+            Width="284"
             Height="261"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Visibility="Visible">
+            VerticalAlignment="Top"
+            Visibility="Visible" Margin="0,35,0,0" Grid.Row="1">
             <StackPanel.Background>
                 <ImageBrush ImageSource="/img/foret.jpg" />
             </StackPanel.Background>
@@ -69,15 +67,16 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Click="Button_Connexion"
+                Cursor="Hand"
                 Content="Se connecter" />
         </StackPanel>
         <StackPanel
             x:Name="RechercheCourse"
-            Width="287"
+            Width="288"
             Height="235"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Visibility="Hidden">
+            VerticalAlignment="Top"
+            Visibility="Hidden" Margin="0,48,0,0" Grid.Row="1">
             <Label Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,20,0,0" />
             <ComboBox x:Name="choixCourse">
                 <ComboBoxItem Content="Course 1" />
@@ -105,9 +104,9 @@
             Grid.ColumnSpan="2"
             Width="338"
             Height="284"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Visibility="Hidden">
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Visibility="Hidden" Margin="231,23,0,0" Grid.Row="1">
             <Label Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" />
             <Label Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" />
@@ -145,9 +144,9 @@
             Grid.ColumnSpan="2"
             Width="338"
             Height="256"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Visibility="Hidden">
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Visibility="Hidden" Margin="231,37,0,0" Grid.Row="1">
             <Label Content="Sélectionner le coureur" />
             <ComboBox>
                 <ComboBoxItem Content="" />
@@ -180,10 +179,10 @@
             Grid.ColumnSpan="2"
             Width="360"
             Height="162"
-            Margin="0,0,0,150"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Visibility="Hidden">
+            Margin="220,9,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Visibility="Hidden" Grid.Row="1">
             <Label
                 HorizontalAlignment="Center"
                 Content="Montant total"
@@ -211,12 +210,9 @@
         </StackPanel>
         <Grid
             x:Name="imgCourse"
-            Grid.ColumnSpan="2"
             Width="360"
             Height="362"
-            Margin="409,53,0,0"
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch">
+            Margin="24,11,16,9" Grid.Column="1" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -269,6 +265,16 @@
                 Source="/img/obstacle.jpg"
                 Stretch="Fill" />
         </Grid>
+        <Label x:Name="lbConnexion" Content="Connexion" 
+               HorizontalAlignment="Left" 
+               Height="32" Margin="23,0,0,0" 
+               VerticalAlignment="Center" 
+               Width="70" 
+               Background="#FF00E511"
+               MouseLeftButtonUp="connexionLabelClick"
+               Cursor="Hand"/>
+        <Label Content="Rechercher la course" HorizontalAlignment="Left" Height="32" Margin="108,0,0,0" VerticalAlignment="Center" Width="121" Background="#FF00E511"/>
+        <Label Content="Selectionner les coureurs" HorizontalAlignment="Left" Height="32" Margin="245,0,0,0" VerticalAlignment="Center" Width="145" Background="#FF00E511"/>
 
     </Grid>
 </Window>
