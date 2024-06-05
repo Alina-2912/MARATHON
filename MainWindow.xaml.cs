@@ -91,8 +91,14 @@ namespace SAE_201_MARATHON
         /*    --------------------    LABELS      -------------------      */
         private void connexionLabelClick (object sender, MouseButtonEventArgs e) 
         {
-        
-        
+            stackPanelConnexion.Visibility = Visibility.Visible;
+
+            RechercheCourse.Visibility = Visibility.Hidden;
+            RechercheCoureurs.Visibility= Visibility.Hidden;
+            ConfirmationInscription.Visibility = Visibility.Hidden;
+            SelectionCoureurs.Visibility = Visibility.Hidden;
+            ConfirmationInscription.Visibility = Visibility.Hidden;
+            imgCourse.Visibility = Visibility.Visible;
         }
 
 
