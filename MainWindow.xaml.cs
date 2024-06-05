@@ -131,6 +131,9 @@ namespace SAE_201_MARATHON
             labelRechercheCourse.TextDecorations = null;
             labelSelectionCoureurs.TextDecorations = null;
             labelSelectionCoureurs.Background = Brushes.LawnGreen;
+
+            tbLogin.Text = string.Empty;
+            pswrdBox.Password = string.Empty;
         }
 
         /*    --------------------    LABELS      -------------------      */
