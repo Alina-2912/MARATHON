@@ -216,9 +216,20 @@ namespace SAE_201_MARATHON
             }
         }
 
+        private void butModifier_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
+        private void butSupprimer_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+
+        private void butAjouter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     
 

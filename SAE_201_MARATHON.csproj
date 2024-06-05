@@ -16,7 +16,6 @@
     <None Remove="img\obstacle.jpg" />
     <None Remove="img\rechercher.png" />
     <None Remove="img\supprimer.png" />
-    <None Remove="modifier.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,7 +43,6 @@
     <Resource Include="img\supprimer.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="modifier.png" />
   </ItemGroup>
 
 </Project>
