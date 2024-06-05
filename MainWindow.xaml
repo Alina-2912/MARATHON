@@ -265,16 +265,36 @@
                 Source="/img/obstacle.jpg"
                 Stretch="Fill" />
         </Grid>
-        <Label x:Name="lbConnexion" Content="Connexion" 
+        <TextBlock x:Name="lbConnexion" 
+               Text="Se deconnecter" 
                HorizontalAlignment="Left" 
                Height="32" Margin="23,0,0,0" 
                VerticalAlignment="Center" 
-               Width="70" 
+               Width="98" 
                Background="#FF00E511"
                MouseLeftButtonUp="connexionLabelClick"
-               Cursor="Hand"/>
-        <Label Content="Rechercher la course" HorizontalAlignment="Left" Height="32" Margin="108,0,0,0" VerticalAlignment="Center" Width="121" Background="#FF00E511"/>
-        <Label Content="Selectionner les coureurs" HorizontalAlignment="Left" Height="32" Margin="245,0,0,0" VerticalAlignment="Center" Width="145" Background="#FF00E511"/>
+               Cursor="Hand"
+               Visibility="Visible"/>
+        <TextBlock x:Name="labelRechercheCourse" 
+               Text="Rechercher la course" 
+               HorizontalAlignment="Center" 
+               Height="32" 
+               VerticalAlignment="Center"
+               Width="120" 
+               Background="#FF00E511"
+               Cursor="Hand"
+               MouseLeftButtonUp="rechercherCourseLabelClick"/>
+        <TextBlock x:Name="labelSelectionCoureurs" 
+               Text="Selectionner les coureurs" 
+               HorizontalAlignment="Left" 
+               Height="32" Margin="283,0,0,0" 
+               VerticalAlignment="Center" 
+               Width="145" 
+               Background="#FF00E511" 
+               Grid.ColumnSpan="2"
+               Cursor="Hand"
+               MouseLeftButtonUp="selectionCoureursLabelClick"
+                   />
 
     </Grid>
 </Window>

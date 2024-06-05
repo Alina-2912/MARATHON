@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SAE_201_MARATHON
 {
@@ -23,9 +24,16 @@ namespace SAE_201_MARATHON
         public MainWindow()
         {
             InitializeComponent();
-            
+
         }
         /*    --------------------    BUTTONS      -------------------      */
+
+        private void Button_Connexion(object sender, RoutedEventArgs e)
+        {
+            stackPanelConnexion.Visibility = Visibility.Hidden;
+            RechercheCourse.Visibility = Visibility.Visible;
+
+        }
 
         private void Button_Suivant_1(object sender, RoutedEventArgs e)
         {
@@ -42,6 +50,7 @@ namespace SAE_201_MARATHON
 
         private void Button_Precedent_1(object sender, RoutedEventArgs e)
         {
+
             RechercheCourse.Visibility = Visibility.Visible;
             RechercheCoureurs.Visibility = Visibility.Hidden;
             imgCourse.Visibility = Visibility.Visible;
@@ -70,18 +79,6 @@ namespace SAE_201_MARATHON
             ConfirmationInscription.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Connexion(object sender, RoutedEventArgs e)
-        {
-            stackPanelConnexion.Visibility = Visibility.Hidden;
-            RechercheCourse.Visibility = Visibility.Visible;
-        }
-
-        private void Confirmation_Pass() 
-        {
-            stackPanelConnexion.Visibility = Visibility.Visible;
-            RechercheCoureurs.Visibility = Visibility.Hidden;
-        }
-
         private void Button_Deconnexion(object sender, RoutedEventArgs e)
         {
             stackPanelConnexion.Visibility= Visibility.Visible;
@@ -100,8 +97,48 @@ namespace SAE_201_MARATHON
             ConfirmationInscription.Visibility = Visibility.Hidden;
             imgCourse.Visibility = Visibility.Visible;
 
+            lbConnexion.Background = Brushes.GreenYellow;
+            lbConnexion.TextDecorations = TextDecorations.Underline;
+        }
+        private void rechercherCourseLabelClick(object sender, MouseButtonEventArgs e)
+        {
+            RechercheCourse.Visibility = Visibility.Visible;
+            
+            stackPanelConnexion.Visibility = Visibility.Hidden;
+            RechercheCoureurs.Visibility = Visibility.Hidden;
+            ConfirmationInscription.Visibility = Visibility.Hidden;
+            SelectionCoureurs.Visibility = Visibility.Hidden;
+            ConfirmationInscription.Visibility = Visibility.Hidden;
+            imgCourse.Visibility = Visibility.Visible;
+
+            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+
         }
 
+        private void selectionCoureursLabelClick(object sender, MouseButtonEventArgs e)
+        {
+            SelectionCoureurs.Visibility = Visibility.Visible;
+            
+            RechercheCourse.Visibility = Visibility.Hidden;
+            stackPanelConnexion.Visibility = Visibility.Hidden;
+            RechercheCoureurs.Visibility = Visibility.Hidden;
+            ConfirmationInscription.Visibility = Visibility.Hidden;
+            ConfirmationInscription.Visibility = Visibility.Hidden;
+            imgCourse.Visibility = Visibility.Hidden;
+
+            labelSelectionCoureurs.Background = Brushes.GreenYellow;
+            labelSelectionCoureurs.TextDecorations = TextDecorations.Underline;
+        }
+        private void controlLabels()
+        {
+            if (stackPanelConnexion.Visibility == Visibility.Visible)
+            {
+                lbConnexion.Visibility = Visibility.Hidden;
+                labelRechercheCourse.Visibility = Visibility.Hidden;
+                labelSelectionCoureurs.Visibility = Visibility.Hidden;
+            }
+        }
 
 
 
