@@ -9,7 +9,11 @@
 
   <ItemGroup>
     <None Remove="img\ajouter.png" />
+    <None Remove="img\background.jpg" />
+    <None Remove="img\courseDeux.jpg" />
+    <None Remove="img\courseTrois.jpg" />
     <None Remove="img\foret.jpg" />
+    <None Remove="img\logo.png" />
     <None Remove="img\marathone.jpg" />
     <None Remove="img\modifier.png" />
     <None Remove="img\montagne.jpg" />
@@ -22,8 +26,20 @@
     <Resource Include="img\ajouter.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="img\background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\courseDeux.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\courseTrois.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\foret.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\marathone.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -9,6 +9,9 @@
     Width="850"
     Height="500"
     mc:Ignorable="d">
+    <Window.Background>
+        <ImageBrush ImageSource="/img/background.jpg" Stretch="Fill" />
+    </Window.Background>
     <Window.DataContext>
         <local:Coureur x:Name="c" />
     </Window.DataContext>
@@ -25,6 +28,7 @@
             Grid.ColumnSpan="2"
             Fill="#FF2CADFF"
             Stroke="Black"  />
+        <Image Source="/img/logo.png" Stretch="Fill" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="169" Grid.Column="1"/>
         <StackPanel
             x:Name="stackPanelConnexion"
             Width="284"
@@ -282,12 +286,12 @@ Header="Fédération" />
             <Image
                 Grid.Row="1"
                 Margin="136,2,25,2"
-                Source="/img/montagne.jpg"
+                Source="/img/courseDeux.jpg"
                 Stretch="Fill" />
             <Image
                 Grid.Row="2"
                 Margin="134,3,25,0"
-                Source="/img/obstacle.jpg"
+                Source="/img/courseTrois.jpg"
                 Stretch="Fill" />
         </Grid>
         <TextBlock x:Name="lbConnexion" 
