@@ -81,21 +81,16 @@
             Height="235"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Visibility="Hidden" Grid.Row="1">
-            <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
-                    <GradientStop Color="#7FD02121" Offset="0"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
-            <Label Foreground="White" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="14" FontWeight="Bold" />
-            <ComboBox x:Name="choixCourse">
+            Visibility="Hidden" Grid.Row="1" Background="White">
+
+            <Label Foreground="Black" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="14" />
+            <ComboBox x:Name="choixCourse" FontSize="14">
                 <ComboBoxItem Content="Course 1" />
                 <ComboBoxItem Content="Course 2" />
                 <ComboBoxItem Content="Course 3" />
             </ComboBox>
-            <Label Foreground="White" Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" FontSize="14" FontWeight="Bold" />
-            <DatePicker x:Name="choixDate" />
+            <Label Foreground="Black" Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" FontSize="14" />
+            <DatePicker x:Name="choixDate" FontSize="14" />
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
                     Width="83"

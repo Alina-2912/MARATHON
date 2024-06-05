@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dvorn\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {}
+    "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dvorn\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {
+    "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dvorn\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
+        "projectUniqueName": "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj",
         "projectName": "SAE_201_MARATHON",
-        "projectPath": "C:\\Users\\dvorn\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
+        "projectPath": "D:\\Alina\\Codes\\Nouveau dossier\\SAE_201_MARATHON.csproj",
         "packagesPath": "C:\\Users\\dvorn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dvorn\\Documents\\GitHub\\SAE_201_MARATHON\\obj\\",
+        "outputPath": "D:\\Alina\\Codes\\Nouveau dossier\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dvorn\\AppData\\Roaming\\NuGet\\NuGet.Config",
