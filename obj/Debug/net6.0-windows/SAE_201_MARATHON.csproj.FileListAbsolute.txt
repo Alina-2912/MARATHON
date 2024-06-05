@@ -46,3 +46,27 @@ C:\Users\ismaimal\Downloads\SAE_201_MARATHON\obj\Debug\net6.0-windows\refint\SAE
 C:\Users\ismaimal\Downloads\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.pdb
 C:\Users\ismaimal\Downloads\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.genruntimeconfig.cache
 C:\Users\ismaimal\Downloads\SAE_201_MARATHON\obj\Debug\net6.0-windows\ref\SAE_201_MARATHON.dll
+D:\Alina\Codes\Nouveau dossier\bin\Debug\net6.0-windows\SAE_201_MARATHON.exe
+D:\Alina\Codes\Nouveau dossier\bin\Debug\net6.0-windows\SAE_201_MARATHON.deps.json
+D:\Alina\Codes\Nouveau dossier\bin\Debug\net6.0-windows\SAE_201_MARATHON.runtimeconfig.json
+D:\Alina\Codes\Nouveau dossier\bin\Debug\net6.0-windows\SAE_201_MARATHON.dll
+D:\Alina\Codes\Nouveau dossier\bin\Debug\net6.0-windows\SAE_201_MARATHON.pdb
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\PanelClient.g.cs
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\App.g.cs
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON_MarkupCompile.cache
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON_MarkupCompile.lref
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\MainWindow.baml
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\PanelClient.baml
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.g.resources
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.GeneratedMSBuildEditorConfig.editorconfig
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.AssemblyInfoInputs.cache
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.AssemblyInfo.cs
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.csproj.CoreCompileInputs.cache
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.sourcelink.json
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.dll
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\refint\SAE_201_MARATHON.dll
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.pdb
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\SAE_201_MARATHON.genruntimeconfig.cache
+D:\Alina\Codes\Nouveau dossier\obj\Debug\net6.0-windows\ref\SAE_201_MARATHON.dll

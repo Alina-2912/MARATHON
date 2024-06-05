@@ -58,13 +58,13 @@
             <TextBox x:Name="tbLogin"
                 Height="31"
                 Text=""
-                TextWrapping="Wrap" />
+                TextWrapping="Wrap" FontSize="14" />
             <Label
                 Height="30"
                 Background="#FFDEDEDE"
                 Content="Mot de passe"
                 FontSize="14" />
-            <PasswordBox x:Name="pswrdBox" Height="34" />
+            <PasswordBox x:Name="pswrdBox" Height="34" FontSize="14" />
             <Button
                 Width="103"
                 Height="37"
@@ -73,7 +73,7 @@
                 VerticalAlignment="Center"
                 Click="Button_Connexion"
                 Cursor="Hand"
-                Content="Se connecter" />
+                Content="Se connecter" FontSize="14" />
         </StackPanel>
         <StackPanel
             x:Name="RechercheCourse" 
@@ -181,26 +181,21 @@ Header="Fédération" />
             Height="285"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Visibility="Hidden" Grid.Row="1">
-            <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#7FBE1DDA" Offset="1"/>
-                    <GradientStop Color="#7FD02121" Offset="0"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
-            <Label Foreground="White" Content="Sélectionner le coureur" FontSize="14" FontWeight="Bold" />
+            Visibility="Hidden" Grid.Row="1" Background="White">
 
-            <ComboBox>
+            <Label Foreground="Black" Content="Sélectionner le coureur" FontSize="14" Background="#FFD1D1D1" />
+
+            <ComboBox FontSize="14">
                 <ComboBoxItem Content="" />
                 <ComboBoxItem Content="" />
                 <ComboBoxItem Content="" />
             </ComboBox>
-            <Label Foreground="White" Content="Sélectionner la date" FontSize="14" FontWeight="Bold" />
-            <DatePicker />
-            <Label Foreground="White" Content="Saisir des numéros de téléphones d’amis (pas obligatoire) " FontSize="14" FontWeight="Bold" />
-            <TextBox Margin="0,3,0,0" />
-            <TextBox Margin="0,3,0,0" />
-            <TextBox Margin="0,3,0,0" />
+            <Label Foreground="Black" Content="Sélectionner la date" FontSize="14" Background="#FFD1D1D1" />
+            <DatePicker FontSize="14" />
+            <Label Foreground="Black" Content="Saisir des numéros de téléphones d’amis (pas obligatoire) " FontSize="14" Background="#FFD1D1D1" />
+            <TextBox Margin="0,3,0,0" FontSize="14" />
+            <TextBox Margin="0,3,0,0" FontSize="14" />
+            <TextBox Margin="0,3,0,0" FontSize="14" />
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
                     Width="75"
