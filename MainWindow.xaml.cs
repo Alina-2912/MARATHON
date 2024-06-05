@@ -39,6 +39,12 @@ namespace SAE_201_MARATHON
 
             lbConnexion.Background = Brushes.LawnGreen;
             lbConnexion.TextDecorations = null;
+            labelSelectionCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionCoureurs.TextDecorations = null;
+
+            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+
         }
 
         private void Button_Suivant_1(object sender, RoutedEventArgs e)
@@ -46,6 +52,14 @@ namespace SAE_201_MARATHON
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Visible;
             imgCourse.Visibility = Visibility.Hidden;
+
+            labelSelectionCoureurs.Background = Brushes.GreenYellow;
+            labelSelectionCoureurs.TextDecorations = TextDecorations.Underline;
+
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+            labelRechercheCourse.TextDecorations = null;
+            labelRechercheCourse.Background = Brushes.LawnGreen;
         }
 
         private void Button_Suivant_2(object sender, RoutedEventArgs e)
@@ -56,10 +70,17 @@ namespace SAE_201_MARATHON
 
         private void Button_Precedent_1(object sender, RoutedEventArgs e)
         {
-
             RechercheCourse.Visibility = Visibility.Visible;
             RechercheCoureurs.Visibility = Visibility.Hidden;
             imgCourse.Visibility = Visibility.Visible;
+
+            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+            labelSelectionCoureurs.TextDecorations = null;
+            labelSelectionCoureurs.Background = Brushes.LawnGreen;
         }
 
         private void Button_Precedent_2(object sender, RoutedEventArgs e)
@@ -89,6 +110,14 @@ namespace SAE_201_MARATHON
         {
             stackPanelConnexion.Visibility= Visibility.Visible;
             RechercheCourse.Visibility= Visibility.Hidden;
+
+            lbConnexion.Background = Brushes.GreenYellow;
+            lbConnexion.TextDecorations = TextDecorations.Underline;
+
+            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.TextDecorations = null;
+            labelSelectionCoureurs.TextDecorations = null;
+            labelSelectionCoureurs.Background = Brushes.LawnGreen;
         }
 
         /*    --------------------    LABELS      -------------------      */
