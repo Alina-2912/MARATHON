@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SAE_201_MARATHON
-build_property.ProjectDir = C:\Users\dvorn\source\repos\SAE_201_MARATHON\
+build_property.ProjectDir = C:\Users\dvorn\Documents\GitHub\SAE_201_MARATHON\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

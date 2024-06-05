@@ -35,8 +35,8 @@
             Width="284"
             Height="261"
             HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Visibility="Visible" Margin="0,35,0,0" Grid.Row="1">
+            VerticalAlignment="Center"
+            Visibility="Visible" Grid.Row="1">
             <StackPanel.Background>
                 <ImageBrush ImageSource="/img/foret.jpg" />
             </StackPanel.Background>
