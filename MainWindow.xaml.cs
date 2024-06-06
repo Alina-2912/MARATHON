@@ -281,7 +281,7 @@ namespace SAE_201_MARATHON
             ConfirmationInscription.Visibility = Visibility.Hidden;
             SelectionCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
-            gridCourse.Visibility = Visibility.Visible;
+            gridCourse.Visibility = Visibility.Hidden;
 
             lbConnexion.Background = Brushes.GreenYellow;
             lbConnexion.TextDecorations = TextDecorations.Underline;
