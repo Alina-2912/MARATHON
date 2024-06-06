@@ -1,3 +1,4 @@
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,45 @@ namespace SAE_201_MARATHON
                 MessageBox.Show("Identifiant ou mot de passe incorrect", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        public void ButtonConnexion()
+        {
+            string connectionString = "Server=srv-peda-new;" +
+                "port=5433;" +
+                "Database=beaune_sae;" +
+                "Search Path = wpfcourse;" +
+                "uid=ismaimal;" +
+                "password=YLrlDE;";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    // Perform database operations
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions
+                }
+            }
+        }
+        public void ButtonConnexion(string username, string password)
+        {
+            string connectionString = $"Server=srv-peda-new;Database=beaune_sae;User Id={username};Password={password};";
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    // Perform database operations
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions
+                }
+            }
+        }
+
+
 
         //public void BouttonConnexionEnntrer(object sender, KeyEventArgs e)
         //{

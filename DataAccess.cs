@@ -39,11 +39,11 @@ namespace SAE_201_MARATHON
             {
                 Connexion = new NpgsqlConnection();
                 Connexion.ConnectionString = "Server=srv-peda-new;" +
- "port=5433;" +
- "Database=beaune_sae;" +
- "Search Path = wpfcourse;" +
- "uid=ismaimal;" +
- "password=YLrlDE;";
+                "port=5433;" +
+                "Database=beaune_sae;" +
+                "Search Path = wpfcourse;" +
+                "uid=ismaimal;" +
+                "password=YLrlDE;";
                 Connexion.Open();
             }
             catch (Exception e)
