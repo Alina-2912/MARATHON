@@ -116,7 +116,7 @@
         </StackPanel>
         <StackPanel
             x:Name="RechercheCoureurs"
-            Visibility="Hidden" Grid.Row="1" Margin="50,20,30,20" Background="White">
+            Visibility="Hidden" Grid.Row="1" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Foreground="Black" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" Background="#FFC3C3C3" />
             <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" FontSize="14" />
             <Label Foreground="Black" Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" Background="#FFCCCCCC" />
@@ -337,8 +337,8 @@
             
             Visibility="Hidden" 
             Grid.Column="1" 
-            Margin="10,0,10,0" 
-            Grid.Row="1" Grid.ColumnSpan="2" Background="White" 
+            Margin="20,43,20,43" 
+            Grid.Row="1" Grid.ColumnSpan="2" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" 
             >
             <local:PanelClient x:Name="UCPanelClient"  IsEnabled="False" DataContext="{Binding SelectedItem, ElementName=dgClients}" Height="283" />
             <StackPanel  Grid.Column="1"   Width="110"   Orientation="Horizontal" HorizontalAlignment="Center"   >
