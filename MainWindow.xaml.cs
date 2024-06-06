@@ -31,14 +31,14 @@ namespace SAE_201_MARATHON
 
         public void ButtonConnexion(object sender, RoutedEventArgs e)
         {
-            const string correctUsername = "imdapi";
-            const string correctPassword = "password123";
+            const string phpLogin = "imdapi";
+            const string phpMotDePasse = "password123";
 
 
             string login = tbLogin.Text;
             string motDePasse = pswrdBox.Password;
 
-            if (login == correctUsername && motDePasse == correctPassword)
+            if (login == phpLogin && motDePasse == phpMotDePasse)
             {
                 stackPanelConnexion.Visibility = Visibility.Hidden;
                 RechercheCourse.Visibility = Visibility.Visible;
