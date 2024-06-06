@@ -49,6 +49,7 @@ namespace SAE_201_MARATHON
                 labelRechercheCourse.Visibility = Visibility.Visible;
                 labelRechercheCoureurs.Visibility = Visibility.Visible;
                 labelSelectionneCoureurs.Visibility = Visibility.Visible;
+                labelbMontantTotal.Visibility = Visibility.Visible;
 
                 lbConnexion.Background = Brushes.LawnGreen;
                 lbConnexion.TextDecorations = null;
