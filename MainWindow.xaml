@@ -404,13 +404,13 @@ Cursor="Hand"
 Visibility="Visible"
 MouseLeftButtonUp="selectionnerCoureursLabelClick" FontSize="14" Grid.ColumnSpan="2" Margin="10,0,0,0"
    />
-            <TextBlock x:Name="lbConnexion_Copy" 
+            <TextBlock x:Name="labelbMontantTotal" 
 Text="Montant total" 
 Height="32" 
 
 TextAlignment="Center"
 Background="LawnGreen"
-MouseLeftButtonUp="connexionLabelClick"
+MouseLeftButtonUp="montantTotalLabelClick"
 Cursor="Hand"
 Visibility="Visible" FontSize="14" Grid.Column="1" Margin="10,0,0,0"/>
         </StackPanel>

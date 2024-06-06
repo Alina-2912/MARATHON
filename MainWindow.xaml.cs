@@ -127,6 +127,12 @@ namespace SAE_201_MARATHON
 
             labelRechercheCoureurs.TextDecorations = null;
             labelRechercheCoureurs.Background = Brushes.GreenYellow;
+
+            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.TextDecorations = null;
+
+            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.TextDecorations = null;
         }
 
         private void Button_Precedent_2(object sender, RoutedEventArgs e)
@@ -146,13 +152,29 @@ namespace SAE_201_MARATHON
 
             labelRechercheCourse.Background = Brushes.LawnGreen;
             labelRechercheCourse.TextDecorations = null;
+
+            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.TextDecorations = null;
         }
         private void Button_Suivant_3(object sender, RoutedEventArgs e)
         {
             SelectionCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Visible;
 
+            labelbMontantTotal.Background = Brushes.GreenYellow;
+            labelbMontantTotal.TextDecorations = TextDecorations.Underline;
 
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+
+            labelRechercheCourse.TextDecorations = null;
+            labelRechercheCourse.Background = Brushes.LawnGreen;
+
+            labelRechercheCoureurs.TextDecorations = null;
+            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+
+            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.TextDecorations = null;
         }
 
         private void Button_Confirmer(object sender, RoutedEventArgs e)
@@ -165,6 +187,21 @@ namespace SAE_201_MARATHON
         {
             SelectionCoureurs.Visibility = Visibility.Visible;
             ConfirmationInscription.Visibility = Visibility.Hidden;
+
+            labelSelectionneCoureurs.Background = Brushes.GreenYellow;
+            labelSelectionneCoureurs.TextDecorations = TextDecorations.Underline;
+
+            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.TextDecorations = null;
+
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+
+            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.TextDecorations = null;
+
+            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.TextDecorations = null;
         }
 
         private void Button_Deconnexion(object sender, RoutedEventArgs e)
@@ -300,7 +337,32 @@ namespace SAE_201_MARATHON
             labelRechercheCoureurs.Background = Brushes.LawnGreen;
             labelRechercheCoureurs.TextDecorations = null;
         }
+        private void montantTotalLabelClick(object sender, MouseButtonEventArgs e)
+        {
+            ConfirmationInscription.Visibility = Visibility.Visible;
 
+            SelectionCoureurs.Visibility = Visibility.Hidden;
+            RechercheCoureurs.Visibility = Visibility.Hidden;
+            ListeRechercheCoureurs.Visibility = Visibility.Hidden;
+            RechercheCourse.Visibility = Visibility.Hidden;
+            stackPanelConnexion.Visibility = Visibility.Hidden;
+            gridCourse.Visibility = Visibility.Hidden;
+
+            labelbMontantTotal.Background = Brushes.GreenYellow;
+            labelbMontantTotal.TextDecorations = TextDecorations.Underline;
+
+            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.TextDecorations = null;
+
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+
+            labelRechercheCourse.TextDecorations = null;
+            labelRechercheCourse.Background = Brushes.LawnGreen;
+
+            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.TextDecorations = null;
+        }
         private void butModifier_Click(object sender, RoutedEventArgs e)
         {
 
