@@ -60,19 +60,31 @@
             <Label
                 Height="29"
                 Margin="0,15,0,0"
-                Background="#FFE0E0E0"
                 Content="Login"
-                FontSize="14" />
+                FontSize="14" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA0CDFF" Offset="0.2"/>
+                        <GradientStop Color="#FF3A97FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
             <TextBox x:Name="tbLogin"
                 Height="31"
                 Text=""
-                TextWrapping="Wrap" FontSize="14" />
+                TextWrapping="Wrap" FontSize="14" Background="#FFA8FBE6" />
             <Label
                 Height="30"
-                Background="#FFDEDEDE"
                 Content="Mot de passe"
-                FontSize="14" />
-            <PasswordBox x:Name="pswrdBox" Height="34" FontSize="14" />
+                FontSize="14" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA0CDFF" Offset="0.2"/>
+                        <GradientStop Color="#FF3A97FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <PasswordBox x:Name="pswrdBox" Height="34" FontSize="14" Background="#FFA8FBE6" />
             <Button
                 Name="butConnexion"
                 Width="103"
@@ -82,7 +94,14 @@
                 VerticalAlignment="Center"
                 Click="ButtonConnexion"
                 Cursor="Hand"
-                Content="Se connecter" FontSize="14" />
+                Content="Se connecter" FontSize="15" Foreground="White" FontWeight="Bold" >
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF0F716F"/>
+                        <GradientStop Color="#FF11C5C0" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
         <StackPanel
             x:Name="RechercheCourse" 
