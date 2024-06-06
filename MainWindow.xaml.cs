@@ -43,6 +43,8 @@ namespace SAE_201_MARATHON
                 stackPanelConnexion.Visibility = Visibility.Hidden;
                 RechercheCourse.Visibility = Visibility.Visible;
 
+                gridCourse.Visibility = Visibility.Visible;
+
                 lbConnexion.Visibility = Visibility.Visible;
                 labelRechercheCourse.Visibility = Visibility.Visible;
                 labelRechercheCoureurs.Visibility = Visibility.Visible;
@@ -76,7 +78,7 @@ namespace SAE_201_MARATHON
             RechercheCoureurs.Visibility = Visibility.Visible;
             ListeRechercheCoureurs.Visibility = Visibility.Visible;
 
-            gridCourse.Visibility = Visibility.Visible;
+            gridCourse.Visibility = Visibility.Hidden;
 
             labelRechercheCoureurs.Background = Brushes.GreenYellow;
             labelRechercheCoureurs.TextDecorations = TextDecorations.Underline;
@@ -133,13 +135,16 @@ namespace SAE_201_MARATHON
             ListeRechercheCoureurs.Visibility = Visibility.Visible;
             SelectionCoureurs.Visibility = Visibility.Hidden;
 
-            labelSelectionneCoureurs.Background = Brushes.GreenYellow;
-            labelSelectionneCoureurs.TextDecorations = TextDecorations.Underline;
+            labelRechercheCoureurs.Background = Brushes.GreenYellow;
+            labelRechercheCoureurs.TextDecorations = TextDecorations.Underline;
+
+            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.TextDecorations = null;
 
             lbConnexion.Background = Brushes.LawnGreen;
             lbConnexion.TextDecorations = null;
 
-            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.Background = Brushes.LawnGreen;
             labelRechercheCourse.TextDecorations = null;
         }
         private void Button_Suivant_3(object sender, RoutedEventArgs e)
@@ -176,6 +181,7 @@ namespace SAE_201_MARATHON
             labelRechercheCoureurs.TextDecorations = null;
             labelRechercheCoureurs.Background = Brushes.LawnGreen;
 
+            gridCourse.Visibility = Visibility.Hidden;
 
             tbLogin.Text = string.Empty;
             pswrdBox.Password = string.Empty;
