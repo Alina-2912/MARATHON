@@ -227,6 +227,7 @@ namespace SAE_201_MARATHON
             lbConnexion.Visibility = Visibility.Visible;
             labelRechercheCourse.Visibility = Visibility.Hidden;
             labelRechercheCoureurs.Visibility = Visibility.Hidden;
+            labelbMontantTotal.Visibility = Visibility.Hidden;
         }
 
         /*    --------------------    LABELS      -------------------      */
@@ -248,6 +249,7 @@ namespace SAE_201_MARATHON
             labelRechercheCourse.Visibility = Visibility.Hidden;
             labelRechercheCoureurs.Visibility = Visibility.Hidden;
             labelSelectionneCoureurs.Visibility = Visibility.Hidden;
+            labelbMontantTotal.Visibility = Visibility.Hidden;
 
             labelRechercheCourse.Background = Brushes.LawnGreen;
             labelRechercheCourse.TextDecorations = null;
@@ -257,6 +259,9 @@ namespace SAE_201_MARATHON
 
             labelSelectionneCoureurs.Background = Brushes.LawnGreen;
             labelSelectionneCoureurs.TextDecorations = null;
+
+            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.TextDecorations = null;
 
             tbLogin.Text = string.Empty;
             pswrdBox.Password = string.Empty;
