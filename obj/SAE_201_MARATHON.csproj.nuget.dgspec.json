@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ismaimal\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {}
+    "C:\\Users\\dvornyka\\Source\\Repos\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ismaimal\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {
+    "C:\\Users\\dvornyka\\Source\\Repos\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ismaimal\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
+        "projectUniqueName": "C:\\Users\\dvornyka\\Source\\Repos\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
         "projectName": "SAE_201_MARATHON",
-        "projectPath": "C:\\Users\\ismaimal\\Documents\\GitHub\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
-        "packagesPath": "C:\\Users\\ismaimal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ismaimal\\Documents\\GitHub\\SAE_201_MARATHON\\obj\\",
+        "projectPath": "C:\\Users\\dvornyka\\Source\\Repos\\SAE_201_MARATHON\\SAE_201_MARATHON.csproj",
+        "packagesPath": "C:\\Users\\dvornyka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dvornyka\\Source\\Repos\\SAE_201_MARATHON\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ismaimal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dvornyka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
