@@ -330,6 +330,9 @@ namespace SAE_201_MARATHON
             labelSelectionneCoureurs.Background = Brushes.LawnGreen;
             labelSelectionneCoureurs.TextDecorations = null;
 
+            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.TextDecorations = null;
+
         }
 
         private void rechercherCoureursLabelClick(object sender, MouseButtonEventArgs e)
@@ -356,6 +359,9 @@ namespace SAE_201_MARATHON
 
             labelSelectionneCoureurs.Background = Brushes.LawnGreen;
             labelSelectionneCoureurs.TextDecorations = null;
+
+            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.TextDecorations = null;
         }
 
 

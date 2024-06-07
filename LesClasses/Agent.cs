@@ -8,5 +8,12 @@ namespace SAE_201_MARATHON.LesClasses
 {
     class Agent
     {
+        private int numAgent;
+        private string loginAgent;
+        private string mdpAgent;
+
+        public int NumAgent { get => numAgent; set => numAgent = value; }
+        public string LoginAgent { get => loginAgent; set => loginAgent = value; }
+        public string MdpAgent { get => mdpAgent; set => mdpAgent = value; }
     }
 }

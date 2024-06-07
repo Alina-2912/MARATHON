@@ -8,5 +8,8 @@ namespace SAE_201_MARATHON.LesClasses
 {
     class Amis
     {
+        private int numAmi;
+
+        public int NumAmi { get => numAmi; set => numAmi = value; }
     }
 }

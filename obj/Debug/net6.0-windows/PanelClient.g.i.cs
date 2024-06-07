@@ -101,7 +101,7 @@ namespace SAE_201_MARATHON {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SAE_201_MARATHON;V1.0.0.0;component/panelclient.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SAE_201_MARATHON;component/panelclient.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PanelClient.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
