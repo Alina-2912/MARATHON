@@ -17,6 +17,7 @@
     <Window.DataContext>
         <local:Coureur x:Name="c" />
     </Window.DataContext>
+
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="26*" />
