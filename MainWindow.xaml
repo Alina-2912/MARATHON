@@ -118,7 +118,7 @@
             </StackPanel.Background>
 
             <Label Foreground="White" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="14" />
-            <ComboBox x:Name="choixCourse" FontSize="14">
+            <ComboBox x:Name="choixCourse" FontSize="14" SelectionChanged="ContenuMontant">
                 <ComboBoxItem Name="choixMarathon" Content="Marathon" />
                 <ComboBoxItem Name="choixSemiMarathon" Content="Semi Marathon" />
                 <ComboBoxItem Name="choix10km" Content="10 Km" />

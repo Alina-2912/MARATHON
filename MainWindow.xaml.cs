@@ -2,6 +2,7 @@ using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,56 +31,26 @@ namespace SAE_201_MARATHON
 
         /*    --------------------    BUTTONS      -------------------      */
 
-        public void ButtonConnexion(object sender, RoutedEventArgs e)
-        {
-            string login = tbLogin.Text;
-            string password = pswrdBox.Password;
-
-            string connectionString = $"Server=srv-peda-new;" +
-                                      "port=5433;" +
-                                      "Database=beaune_sae;" +
-                                      "Search Path=wpfcourse;" +
-                                      $"uid={login};" +
-                                      $"password={password};";
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    // If connection is successful, change the stack panel visibility
-                    stackPanelConnexion.Visibility = Visibility.Hidden;
-                    RechercheCourse.Visibility = Visibility.Visible;
-                    gridCourse.Visibility = Visibility.Visible;
-
-                    lbConnexion.Visibility = Visibility.Visible;
-                    labelRechercheCourse.Visibility = Visibility.Visible;
-                    labelRechercheCoureurs.Visibility = Visibility.Visible;
-                    labelSelectionneCoureurs.Visibility = Visibility.Visible;
-                    labelbMontantTotal.Visibility = Visibility.Visible;
-
-                    lbConnexion.Background = Brushes.LawnGreen;
-                    lbConnexion.TextDecorations = null;
-                    labelRechercheCoureurs.Background = Brushes.LawnGreen;
-                    labelRechercheCoureurs.TextDecorations = null;
-
-                    labelRechercheCourse.Background = Brushes.GreenYellow;
-                    labelRechercheCourse.TextDecorations = TextDecorations.Underline;
-                }
-                catch (Exception ex)
-                {
-                    // Handle exceptions and display error message
-                    MessageBox.Show("Identifiant ou mot de passe incorrect", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-        }
-
-
         //public void ButtonConnexion(object sender, RoutedEventArgs e)
         //{
+        //    string login = tbLogin.Text;
+        //    string password = pswrdBox.Password;
 
-        //    stackPanelConnexion.Visibility = Visibility.Hidden;
+        //    string connectionString = $"Server=srv-peda-new;" +
+        //                              "port=5433;" +
+        //                              "Database=beaune_sae;" +
+        //                              "Search Path=wpfcourse;" +
+        //                              $"uid={login};" +
+        //                              $"password={password};";
+
+        //    using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+        //    {
+        //        try
+        //        {
+        //            connection.Open();
+
+        //            // If connection is successful, change the stack panel visibility
+        //            stackPanelConnexion.Visibility = Visibility.Hidden;
         //            RechercheCourse.Visibility = Visibility.Visible;
         //            gridCourse.Visibility = Visibility.Visible;
 
@@ -96,8 +67,38 @@ namespace SAE_201_MARATHON
 
         //            labelRechercheCourse.Background = Brushes.GreenYellow;
         //            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
-
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            // Handle exceptions and display error message
+        //            MessageBox.Show("Identifiant ou mot de passe incorrect", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        //        }
+        //    }
         //}
+
+
+        public void ButtonConnexion(object sender, RoutedEventArgs e)
+        {
+
+            stackPanelConnexion.Visibility = Visibility.Hidden;
+            RechercheCourse.Visibility = Visibility.Visible;
+            gridCourse.Visibility = Visibility.Visible;
+
+            lbConnexion.Visibility = Visibility.Visible;
+            labelRechercheCourse.Visibility = Visibility.Visible;
+            labelRechercheCoureurs.Visibility = Visibility.Visible;
+            labelSelectionneCoureurs.Visibility = Visibility.Visible;
+            labelbMontantTotal.Visibility = Visibility.Visible;
+
+            lbConnexion.Background = Brushes.LawnGreen;
+            lbConnexion.TextDecorations = null;
+            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.TextDecorations = null;
+
+            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+
+        }
 
 
 
@@ -427,6 +428,33 @@ namespace SAE_201_MARATHON
         private void butAjouter_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        public void ContenuMontant(object sender, RoutedEventArgs e)
+        {
+            choixCourse.SelectionChanged += ContenuMontant;
+
+            if (choixCourse.SelectedValue == choixMarathon)
+            {
+                labAfficheMontant.Content = 50 + " euros";
+            }
+            if (choixCourse.SelectedValue == choixSemiMarathon)
+            {
+                labAfficheMontant.Content = 30 + " euros";
+            }
+            if (choixCourse.SelectedValue == choix10km)
+            {
+                labAfficheMontant.Content = 25 + " euros";
+            }
+            if (choixCourse.SelectedValue == choixDuo)
+            {
+                labAfficheMontant.Content = 40 + " euros";
+            }
+            if (choixCourse.SelectedValue == choixRelais)
+            {
+                //labAfficheMontant.Content.Equals("70 euros");
+                labAfficheMontant.Content = 70 + " euros";
+            }
         }
 
 
