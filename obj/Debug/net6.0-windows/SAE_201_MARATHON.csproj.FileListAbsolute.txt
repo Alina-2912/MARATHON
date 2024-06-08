@@ -181,3 +181,12 @@ C:\Users\dvornyka\Source\Repos\SAE_201_MARATHON\obj\Debug\net6.0-windows\refint\
 C:\Users\dvornyka\Source\Repos\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.pdb
 C:\Users\dvornyka\Source\Repos\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.genruntimeconfig.cache
 C:\Users\dvornyka\Source\Repos\SAE_201_MARATHON\obj\Debug\net6.0-windows\ref\SAE_201_MARATHON.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\Npgsql.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\System.Text.Json.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.csproj.AssemblyReference.cache
+D:\downloads sd card\C#\IUT\s2sae\SAE_201_MARATHON\obj\Debug\net6.0-windows\SAE_201_MARATHON.csproj.CopyComplete

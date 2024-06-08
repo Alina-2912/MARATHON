@@ -76,6 +76,30 @@ namespace SAE_201_MARATHON
         }
 
 
+        //public void ButtonConnexion(object sender, RoutedEventArgs e)
+        //{
+
+        //    stackPanelConnexion.Visibility = Visibility.Hidden;
+        //            RechercheCourse.Visibility = Visibility.Visible;
+        //            gridCourse.Visibility = Visibility.Visible;
+
+        //            lbConnexion.Visibility = Visibility.Visible;
+        //            labelRechercheCourse.Visibility = Visibility.Visible;
+        //            labelRechercheCoureurs.Visibility = Visibility.Visible;
+        //            labelSelectionneCoureurs.Visibility = Visibility.Visible;
+        //            labelbMontantTotal.Visibility = Visibility.Visible;
+
+        //            lbConnexion.Background = Brushes.LawnGreen;
+        //            lbConnexion.TextDecorations = null;
+        //            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+        //            labelRechercheCoureurs.TextDecorations = null;
+
+        //            labelRechercheCourse.Background = Brushes.GreenYellow;
+        //            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+
+        //}
+
+
 
         //public void BouttonConnexionEnntrer(object sender, KeyEventArgs e)
         //{
