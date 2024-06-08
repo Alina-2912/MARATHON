@@ -11,6 +11,8 @@
     <None Remove="img\ajouter.png" />
     <None Remove="img\background.jpg" />
     <None Remove="img\courseDeux.jpg" />
+    <None Remove="img\courseDuo.jpg" />
+    <None Remove="img\courseRelais.jpg" />
     <None Remove="img\courseTrois.jpg" />
     <None Remove="img\foret.jpg" />
     <None Remove="img\logo.png" />
@@ -34,6 +36,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\courseDeux.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\courseDuo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\courseRelais.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\courseTrois.jpg">

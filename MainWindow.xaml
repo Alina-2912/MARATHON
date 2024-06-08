@@ -109,27 +109,44 @@
             Height="235"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Visibility="Hidden" Grid.Row="1" Background="White">
+            Visibility="Hidden" Grid.Row="1">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CC84138E"/>
+                    <GradientStop Color="#CCD51515" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
 
-            <Label Foreground="Black" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="14" />
+            <Label Foreground="White" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="14" />
             <ComboBox x:Name="choixCourse" FontSize="14">
-                <ComboBoxItem Content="Course 1" />
-                <ComboBoxItem Content="Course 2" />
-                <ComboBoxItem Content="Course 3" />
+                <ComboBoxItem Name="choixMarathon" Content="Marathon" />
+                <ComboBoxItem Name="choixSemiMarathon" Content="Semi Marathon" />
+                <ComboBoxItem Name="choix10km" Content="10 Km" />
+                <ComboBoxItem Name="choixDuo" Content="Duo" />
+                <ComboBoxItem Name="choixRelais" Content="Relais" />
             </ComboBox>
-            <Label Foreground="Black" Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" FontSize="14" />
+            <Label Foreground="White" Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" FontSize="14" />
             <DatePicker x:Name="choixDate" FontSize="14" />
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
+                    FontWeight="Bold"
                     Width="83"
                     Height="30"
                     Click="Button_Suivant_1"
                     Content="Suivant"
-                    IsDefault="True" Margin="180,22,24,22" FontSize="14" />
+                    IsDefault="True" Margin="180,22,24,22" FontSize="14" Foreground="White" >
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF240676" Offset="0.366"/>
+                            <GradientStop Color="#FF523F86" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                </Button>
                 <Button
+                    FontWeight="Bold"
                     Height="30"
                     Click="Button_Deconnexion"
-                    Content="Se deconnecter" Margin="10,22,165,22" FontSize="14" />
+                    Content="Se deconnecter" Margin="10,22,165,22" FontSize="14" Foreground="Red" />
             </Grid>
 
         </StackPanel>
@@ -358,12 +375,12 @@
             <Image
                 Grid.Row="3"
                 Margin="420,5,20,5"
-                Source="/img/courseTrois.jpg"
+                Source="/img/courseDuo.jpg"
                 Stretch="Fill" />
             <Image
                 Grid.Row="4"
                 Margin="420,5,20,5"
-                Source="/img/courseTrois.jpg"
+                Source="/img/courseRelais.jpg"
                 Stretch="Fill" />
 
             <TextBlock TextWrapping="Wrap" Grid.Row="0" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" FontSize="14" Margin="20,50,20,5" VerticalAlignment="Top"> 
