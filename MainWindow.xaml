@@ -256,36 +256,45 @@
         <StackPanel
             x:Name="ConfirmationInscription"
             Grid.ColumnSpan="2"
-            Width="360"
+            Width="527"
             Height="162"
-            Margin="245,138,0,0"
-            HorizontalAlignment="Left"
+            HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Visibility="Hidden" Grid.Row="1" Background="White">
+            Visibility="Hidden" Grid.Row="1" Margin="0,70,0,0">
 
             <Label
                 HorizontalAlignment="Center"
                 Content="Montant total"
                 Foreground="Black"
-                FontSize="16" FontWeight="Bold" />
+                FontSize="45" FontWeight="Bold" >
+                <Label.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#E5FFFFFF" Offset="0.25"/>
+                        <GradientStop Color="#19FFFFFF" Offset="1"/>
+                    </RadialGradientBrush>
+                </Label.Background>
+            </Label>
             <Label
-                Height="19"
+                Name="labAfficheMontant"
+                Height="35"
                 Margin="0,2,0,0"
+                FontWeight="Bold"
+                FontSize="18"
                 Background="#FFFDFF07"
                 BorderBrush="Black"
                 BorderThickness="1" />
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
-                    Height="30"
-                    Margin="205,18,27,26"
+                    FontWeight="Bold"
+                    Margin="250,20,20,25"
                     Click="Button_Confirmer"
-                    Content="Confirmer l'inscription" FontSize="14" />
+                    Content=" Confirmer l'inscription " FontSize="16" Foreground="Red" HorizontalAlignment="Center" />
                 <Button
                     Width="75"
                     Height="30"
-                    Margin="28,7,217,15"
+                    Margin="20,20,350,25"
                     Click="Button_Precedent_3"
-                    Content="Precedent" FontSize="14" />
+                    Content="Precedent" FontSize="14" HorizontalAlignment="Center" />
             </Grid>
         </StackPanel>
         <Grid
