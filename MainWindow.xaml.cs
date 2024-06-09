@@ -265,6 +265,7 @@ namespace SAE_201_MARATHON
             labelRechercheCourse.Visibility = Visibility.Hidden;
             labelRechercheCoureurs.Visibility = Visibility.Hidden;
             labelbMontantTotal.Visibility = Visibility.Hidden;
+            labelSelectionneCoureurs.Visibility = Visibility.Hidden;
         }
 
         /*    --------------------    LABELS      -------------------      */

@@ -17,6 +17,21 @@
     <Window.DataContext>
         <local:Coureur x:Name="c" />
     </Window.DataContext>
+    <Window.Resources>
+        <Style x:Key="ColumnCellStyle" TargetType="DataGridCell">
+            <Setter Property="Background" Value="#FFB47C7C"/>
+        </Style>
+        <Style x:Key="ColumnHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB06F6F" Offset="0.002"/>
+                        <GradientStop Color="#FFB47C7C" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
     <Grid >
         <Grid.RowDefinitions>
@@ -152,13 +167,64 @@
         </StackPanel>
         <StackPanel
             x:Name="RechercheCoureurs"
-            Visibility="Hidden" Grid.Row="1" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label Foreground="Black" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14" Background="#FFC3C3C3" />
-            <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" FontSize="14" />
-            <Label Foreground="Black" Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" Background="#FFCCCCCC" />
-            <TextBox x:Name="tbVilleSelectionne" Text="{Binding Ville}" FontSize="14" />
-            <Label Foreground="Black" Content="Selectionne la fédération" Target="{Binding ElementName=cbChoixFederation}" FontSize="14" Background="Silver" />
+            Visibility="Hidden" Grid.Row="1" Margin="100,50,100,0">
+            <!--<Label Foreground="White" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14"  >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B4879"/>
+                        <GradientStop Color="#FF390E7A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>-->
+            <Border CornerRadius="10,10,0,0" >
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B4879"/>
+                        <GradientStop Color="#FF390E7A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Label Foreground="White" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14"/>
+            </Border>
+
+            <TextBox x:Name="tbNomCoureurSelectionne" Text="{Binding Nom}" FontSize="14" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDAA8A8"/>
+                        <GradientStop Color="#FFEDCDCD" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Foreground="White" Content="Entrez la ville" Target="{Binding ElementName=tbVilleSelectionne}" FontSize="14" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B4879"/>
+                        <GradientStop Color="#FF390E7A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <TextBox x:Name="tbVilleSelectionne" Text="{Binding Ville}" FontSize="14">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDAA8A8"/>
+                        <GradientStop Color="#FFEDCDCD" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Foreground="White" Content="Selectionne la fédération" Target="{Binding ElementName=cbChoixFederation}" FontSize="14" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B4879"/>
+                        <GradientStop Color="#FF390E7A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
             <ComboBox x:Name="cbChoixFederation" Text="{Binding ChoixFederation}" FontSize="14">
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFDAA8A8"/>
+                        <GradientStop Color="#FFEDCDCD" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
                 <ComboBoxItem Content="Fédération Française de Football" />
                 <ComboBoxItem Content="Fédération Française de Rugby" />
                 <ComboBoxItem Content="Fédération Française d'Athlétisme" />
@@ -170,50 +236,151 @@
             </ComboBox>
             <Label 
                 Content="Selectionner les coureurs" 
-                Foreground="Black" 
-                FontSize="14" Background="#FFD0CDCD" />
-            <DataGrid
+                Foreground="White" 
+                FontSize="14" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF5B4879"/>
+                        <GradientStop Color="#FF390E7A" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+
+            <Border CornerRadius="0,0,10,10">
+                <DataGrid
                 x:Name="dgClients"
                 MinHeight="150"
                 AutoGenerateColumns="False"
                 IsReadOnly="True"
                 ItemsSource="{Binding LesClients}" Height="126" >
-                <DataGrid.Columns>
-                    <DataGridTextColumn
+                    <DataGrid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFDAA8A8"/>
+                            <GradientStop Color="#FFEDCDCD" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DataGrid.Background>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn
                         Width="30"
-                        Binding="{Binding Nom}"
-                        Header="Id" />
-                    <DataGridTextColumn
+                        Binding="{Binding Id}"
+                        Header="Id" 
+                        CellStyle="{StaticResource ColumnCellStyle}"
+                        HeaderStyle="{StaticResource ColumnHeaderStyle}"/>
+                        <DataGridTextColumn
                         Width="80"
                         Binding="{Binding Nom}"
-                        Header="Nom" />
-                    <DataGridTextColumn
+                        Header="Nom" 
+                        CellStyle="{StaticResource ColumnCellStyle}"
+                        HeaderStyle="{StaticResource ColumnHeaderStyle}"/>
+                        <DataGridTextColumn
                         Width="80"
                         Binding="{Binding Prenom}"
-                        Header="Prenom" />
-                    <DataGridTextColumn
+                        Header="Prenom" 
+                        CellStyle="{StaticResource ColumnCellStyle}"
+                        HeaderStyle="{StaticResource ColumnHeaderStyle}"/>
+                        <DataGridTextColumn
                         Width="80"
                         Binding="{Binding Telephone}"
-                        Header="Ville" />
-                    <DataGridTextColumn
-                        Width="80"
+                        Header="Ville" 
+                        CellStyle="{StaticResource ColumnCellStyle}"
+                        HeaderStyle="{StaticResource ColumnHeaderStyle}"/>
+                        <DataGridTextColumn
+                        Width="500"
                         Binding="{Binding Telephone}"
-                        Header="Fédération" />
-                </DataGrid.Columns>
+                        Header="Fédération" 
+                        CellStyle="{StaticResource ColumnCellStyle}"
+                        HeaderStyle="{StaticResource ColumnHeaderStyle}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
 
-            </DataGrid>
-            <Grid Height="60" HorizontalAlignment="Stretch" Width="334">
-                <Button
+            <Grid Height="80" HorizontalAlignment="Stretch" Margin="0,10,0,0">
+                <!--<Button
                     Height="30"
                     Margin="220,13,32,16"
                     Click="Button_Suivant_2"
-                    Content="Suivant" FontSize="14" />
+                    Content="Suivant" FontSize="14" />-->
+
                 <Button
+                    Height="40"
+                    Width="100"
+                    Margin="220,15,30,15"
+                    Click="Button_Suivant_2"
+                    Content="Suivant" 
+                    FontSize="16"
+                    FontWeight="Bold" 
+                    Foreground="White">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF232323"/>
+                            <GradientStop Color="#FF878787" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF390E7A"/>
+                            <GradientStop Color="#FF5B4879" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
+                        Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="3,3,3,3" 
+                        CornerRadius="20">
+                                <ContentPresenter 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+                <!--<Button
                     Width="75"
                     Height="30"
                     Margin="28,7,217,15"
                     Click="Button_Precedent_1"
-                    Content="Precedent" FontSize="14" />
+                    Content="Precedent" FontSize="14" />-->
+
+                <Button
+                    Width="100"
+                    Height="40"
+                    Margin="30,15,220,15"
+                    Click="Button_Precedent_1"
+                    Content="Precedent" 
+                    FontSize="16"
+                    FontWeight="Bold" Foreground="White">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF232323"/>
+                            <GradientStop Color="#FF878787" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF390E7A"/>
+                            <GradientStop Color="#FF5B4879" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="3,3,3,3" 
+                                CornerRadius="20">
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
             </Grid>
         </StackPanel>
         <StackPanel
