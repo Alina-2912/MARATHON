@@ -1,0 +1,12 @@
+C:\Users\ismaimal\Pictures\SAE_201_MARATHON.exe
+C:\Users\ismaimal\Pictures\SAE_201_MARATHON.dll
+C:\Users\ismaimal\Pictures\SAE_201_MARATHON.deps.json
+C:\Users\ismaimal\Pictures\SAE_201_MARATHON.runtimeconfig.json
+C:\Users\ismaimal\Pictures\SAE_201_MARATHON.pdb
+C:\Users\ismaimal\Pictures\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ismaimal\Pictures\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ismaimal\Pictures\Npgsql.dll
+C:\Users\ismaimal\Pictures\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ismaimal\Pictures\System.Text.Encodings.Web.dll
+C:\Users\ismaimal\Pictures\System.Text.Json.dll
+C:\Users\ismaimal\Pictures\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
