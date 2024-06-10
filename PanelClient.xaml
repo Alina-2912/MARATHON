@@ -8,45 +8,41 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+
     <StackPanel
         x:Name="mainPanel"
         MinWidth="200"
         Margin="60,20,60,20">
+        <!-- DataContext is set in code-behind, no need to set here -->
 
-
-
-        <Label Content="I_d" Target="{Binding ElementName=tbId, Mode=OneWay}" />
+        <Label Content="Id" />
         <TextBox
             x:Name="tbId"
-            Text="{Binding Path=Id, UpdateSourceTrigger=Explicit, Mode=TwoWay, ValidatesOnExceptions=True}"
+            Text="{Binding Path=NumCoureur, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
             TextWrapping="Wrap" />
 
-        <Label Content="N_om" Target="{Binding ElementName=tbNom, Mode=OneWay}" />
+        <Label Content="Nom" />
         <TextBox
             x:Name="tbNom"
-            Text="{Binding Path=Nom, UpdateSourceTrigger=Explicit, Mode=TwoWay, ValidatesOnExceptions=True}"
+            Text="{Binding Path=NomCoureur, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
             TextWrapping="Wrap" />
 
-
-        <Label Content="_Prenom" Target="{Binding ElementName=tbPrenom}" />
+        <Label Content="Prenom" />
         <TextBox
             x:Name="tbPrenom"
-            Text="{Binding Prenom, UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True}"
+            Text="{Binding Path=PrenomCoureur, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
             TextWrapping="Wrap" />
 
-        <Label Content="_Ville" Target="{Binding ElementName=tbVille}" />
+        <Label Content="Ville" />
         <TextBox
             x:Name="tbVille"
-            Text="{Binding Email, UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True}"
+            Text="{Binding Path=VilleCoureur, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
             TextWrapping="Wrap" />
 
-        <Label Content="_Fédération" Target="{Binding ElementName=tbFederation}" />
+        <Label Content="Fédération" />
         <TextBox
             x:Name="tbFederation"
-            Text="{Binding Telephone, UpdateSourceTrigger=Explicit, ValidatesOnExceptions=True}"
+            Text="{Binding Path=NumFederation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=True}"
             TextWrapping="Wrap" />
-
-
-
     </StackPanel>
 </UserControl>

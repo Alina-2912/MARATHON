@@ -24,12 +24,38 @@ namespace SAE_201_MARATHON
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ObservableCollection<Coureur> LesCoureurs { get; set; }
+        private bool isAddingNewCoureur = false;
         public MainWindow()
         {
             InitializeComponent();
-
+            LoadData();
         }
+        private void LoadData()
+        {
+            try
+            {
+                Coureur coureur = new Coureur();
+                LesCoureurs = new ObservableCollection<Coureur>(coureur.ListCoureurs());
+                dgCoureurs.ItemsSource = LesCoureurs;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur: " + ex.Message);
+            }
+            try
+            {
+                Coureur coureur = new Coureur();
+                List<Coureur> coureurs = coureur.ListCoureurs();
 
+                // Bind the list of coureurs to the ComboBox
+                cbCoureurs.ItemsSource = coureurs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
         /*    --------------------    BUTTONS      -------------------      */
 
         //public void ButtonConnexion(object sender, RoutedEventArgs e)
@@ -456,18 +482,149 @@ namespace SAE_201_MARATHON
         }
         private void butModifier_Click(object sender, RoutedEventArgs e)
         {
+            if (dgCoureurs.SelectedItem != null)
+            {
+                UCPanelClient.IsEnabled = true;
+                butModifier.IsEnabled = true;
+                UCPanelClient.DataContext = dgCoureurs.SelectedItem;
+                butSouvgarder.ToolTip = "Enregistrer les modifications";
+                butSouvgarder.IsEnabled = true;
 
+                isAddingNewCoureur = false;
+            }
+            else
+            {
+                MessageBox.Show(this, "Veuillez sélectionner un coureur");
+            }
         }
 
         private void butSupprimer_Click(object sender, RoutedEventArgs e)
         {
+            if (dgCoureurs.SelectedItem != null)
+            {
+                Coureur coureurSelectionne = (Coureur)dgCoureurs.SelectedItem;
+                MessageBoxResult res = MessageBox.Show(this, "Etes-vous sûr de vouloir supprimer " + coureurSelectionne.PrenomCoureur + " " + coureurSelectionne.NomCoureur + " ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (res == MessageBoxResult.Yes)
+                {
+                    LesCoureurs.Remove(coureurSelectionne);
+                    dgCoureurs.Items.Refresh();
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "Veuillez sélectionner un coureur");
+            }
 
         }
 
         private void butAjouter_Click(object sender, RoutedEventArgs e)
         {
+            Coureur nouveauCoureur = new Coureur();
+            LesCoureurs.Add(nouveauCoureur);
+            UCPanelClient.DataContext = nouveauCoureur;
+            UCPanelClient.IsEnabled = true;
+            //butSouvgarder.IsEnabled = true;
+
+            butSouvgarder.ToolTip = "Enregistrer le nouveau coureur";
+
+            isAddingNewCoureur = true;
+        }
+
+        private void butSouvgarder_Click(object sender, RoutedEventArgs e)
+        {
+            if (UCPanelClient.IsEnabled)
+            {
+                Coureur coureur = (Coureur)UCPanelClient.DataContext;
+
+                if (isAddingNewCoureur)
+                {
+                    LesCoureurs.Add(coureur);
+                }
+                else
+                {
+                    int index = LesCoureurs.IndexOf(coureur);
+                    if (index != -1)
+                    {
+                        LesCoureurs[index] = coureur;
+                    }
+                }
+
+                UCPanelClient.IsEnabled = false;
+                butSouvgarder.IsEnabled = false;
+                dgCoureurs.Items.Refresh();
+                isAddingNewCoureur = false;
+            }
+        }
+
+        private void Button_Rechercher(object sender, RoutedEventArgs e)
+        {
+            Coureur coureur = new Coureur();
+            string nomRecherche = txbRechercherNom.Text.Trim().ToLower();
+            string villeRecherche = tbVilleSelectionne.Text.Trim().ToLower();
+            int searchFederationId = cbChoixFederation.SelectedIndex == 0 ? -1 : cbChoixFederation.SelectedIndex;
+
+            List<Coureur> filtereCoureurs = coureur.ListCoureurs();
+
+            if (!string.IsNullOrEmpty(nomRecherche))
+            {
+                filtereCoureurs = filtereCoureurs.Where(c => c.NomCoureur.ToLower().Contains(nomRecherche)).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(villeRecherche))
+            {
+                filtereCoureurs = filtereCoureurs.Where(c => c.VilleCoureur.ToLower().Contains(villeRecherche)).ToList();
+            }
+
+            if (searchFederationId != -1)
+            {
+                filtereCoureurs = filtereCoureurs.Where(c => c.NumFederation == searchFederationId).ToList();
+            }
+
+            dgCoureurs.ItemsSource = filtereCoureurs;
 
         }
+
+
+
+        private void dgCoureurs_Selectionnement(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgCoureurs.SelectedItem != null)
+            {
+                UCPanelClient.DataContext = dgCoureurs.SelectedItem;
+                UCPanelClient.IsEnabled = true;
+            }
+        }
+
+        private void choixCourse_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (choixCourse.SelectedItem != null)
+            {
+                string selectedCourse = ((ComboBoxItem)choixCourse.SelectedItem).Content.ToString();
+
+                if (int.TryParse(selectedCourse.Split(' ')[1], out int courseNumber))
+                {
+                    // Filter coureurs based on the selected course
+                    switch (courseNumber)
+                    {
+                        case 1:
+                            dgCoureurs.ItemsSource = LesCoureurs.Where(c => Convert.ToInt32(c.CodeClub) >= 1 && Convert.ToInt32(c.CodeClub) <= 3).ToList();
+                            break;
+                        case 2:
+                            dgCoureurs.ItemsSource = LesCoureurs.Where(c => Convert.ToInt32(c.CodeClub) >= 4 && Convert.ToInt32(c.CodeClub) <= 6).ToList();
+                            break;
+                        case 3:
+                            dgCoureurs.ItemsSource = LesCoureurs.Where(c => Convert.ToInt32(c.CodeClub) >= 7 && Convert.ToInt32(c.CodeClub) <= 10).ToList();
+                            break;
+                        // Add cases for other courses if needed
+                        default:
+                            // Handle other cases if needed
+                            break;
+                    }
+                }
+            }
+        }
+
 
         public void ContenuMontant(object sender, RoutedEventArgs e)
         {
