@@ -129,7 +129,13 @@
 
         <Label Name="lbTitreSelectionnercourse" Visibility="Hidden" Foreground="Black" Grid.Row="1" Content="Sélectionner une course" 
                FontSize="34" Margin="20,10,0,350" FontWeight="Bold" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        
+
+        <Label Name="lbTitreRechercherCoureur" Visibility="Hidden" Foreground="Black" Grid.Row="1" Content="Rechercher un coureur" 
+       FontSize="34" Margin="20,0,0,620" FontWeight="Bold" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Label Name="lbTitreEnvoiSms" Visibility="Hidden" Foreground="Black" Grid.Row="1" Content="Evoyer les informations de la course a des amis" 
+       FontSize="34" Margin="20,10,0,350" FontWeight="Bold" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
         <Border 
             x:Name="RechercheCourseBorder" 
             Visibility="Hidden" 
@@ -214,7 +220,7 @@
 
         <StackPanel
             x:Name="RechercheCoureurs"
-            Visibility="Hidden" Grid.Row="1" Margin="100,50,100,0">
+            Visibility="Hidden" Grid.Row="1" Margin="100,160,100,0">
             
             <Border CornerRadius="10,10,0,0" >
                 <Border.Background>
