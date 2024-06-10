@@ -1,7 +1,7 @@
 ﻿SAE_201_MARATHON
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
 C:\Users\dvornyka\source\repos\SAE_201_MARATHON\obj\Debug\net6.0-windows\
@@ -16,5 +16,5 @@ C:\Users\dvornyka\source\repos\SAE_201_MARATHON\App.xaml
 197-1007067896
 MainWindow.xaml;PanelClient.xaml;
 
-True
+False
 

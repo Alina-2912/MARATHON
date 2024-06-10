@@ -30,6 +30,9 @@ namespace SAE_201_MARATHON
         {
             InitializeComponent();
             LoadData();
+
+            dgCoureurs.ItemsSource = LesCoureurs;
+            Console.WriteLine("Data loaded successfully.");
         }
         private void LoadData()
         {
@@ -47,6 +50,7 @@ namespace SAE_201_MARATHON
             {
                 Coureur coureur = new Coureur();
                 List<Coureur> coureurs = coureur.ListCoureurs();
+                Console.WriteLine(coureurs.Count);
 
                 // Bind the list of coureurs to the ComboBox
                 cbCoureurs.ItemsSource = coureurs;
@@ -424,6 +428,7 @@ namespace SAE_201_MARATHON
         private void selectionnerCoureursLabelClick(object sender, MouseButtonEventArgs e)
         {
             SelectionCoureurs.Visibility = Visibility.Visible;
+
 
             RechercheCoureurs.Visibility = Visibility.Hidden;
             lbTitreRechercherCoureur.Visibility = Visibility.Hidden;

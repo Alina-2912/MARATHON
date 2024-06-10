@@ -379,37 +379,19 @@
 
             <Border CornerRadius="0,0,10,10">
                 <DataGrid
-                    x:Name="dgCoureurs"
-                    Height="173"
-                    MinHeight="150"
-                    AutoGenerateColumns="False"
-                    IsReadOnly="False"
-                    ItemsSource="{Binding}">
+             x:Name="dgCoureurs"
+            MinHeight="150"
+            AutoGenerateColumns="False"
+            IsReadOnly="False"
+            ItemsSource="{Binding}" 
+                Height="173">
                     <DataGrid.Columns>
-                        <DataGridTextColumn
-                            Width="30"
-                            Binding="{Binding NumCoureur}"
-                            Header="Id" />
-                        <DataGridTextColumn
-                            Width="80"
-                            Binding="{Binding NomCoureur}"
-                            Header="Nom" />
-                        <DataGridTextColumn
-                            Width="80"
-                            Binding="{Binding PrenomCoureur}"
-                            Header="Prenom" />
-                        <DataGridTextColumn
-                            Width="80"
-                            Binding="{Binding VilleCoureur}"
-                            Header="Ville" />
-                        <DataGridTextColumn
-                            Width="80"
-                            Binding="{Binding NumFederation}"
-                            Header="Federation" />
-                        <DataGridTextColumn
-                            Width="80"
-                            Binding="{Binding CodeClub}"
-                            Header="Code club" />
+                        <DataGridTextColumn Width="30" Binding="{Binding NumCoureur}" Header="Id" />
+                        <DataGridTextColumn Width="80" Binding="{Binding NomCoureur}" Header="Nom" />
+                        <DataGridTextColumn Width="80" Binding="{Binding PrenomCoureur}" Header="Prenom" />
+                        <DataGridTextColumn Width="80" Binding="{Binding VilleCoureur}" Header="Ville" />
+                        <DataGridTextColumn Width="80" Binding="{Binding NumFederation}" Header="Federation" />
+                        <DataGridTextColumn Width="80" Binding="{Binding CodeClub}" Header="Code club" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Border>

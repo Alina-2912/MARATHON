@@ -196,7 +196,7 @@ namespace SAE_201_MARATHON
             string connectionString = $"Server=srv-peda-new;" +
                                       "Port=5433;" +
                                       "Database=beaune_sae;" +
-                                      "Search Path=wpfcoureurs;" +
+                                      "Search Path=wpfcourse;" +
                                       $"User Id={login};" +
                                       $"Password={password};";
 
@@ -230,14 +230,11 @@ namespace SAE_201_MARATHON
                     }
                 }
             }
-            // Log the retrieved coureurs count
-
             return coureurs;
         }
 
         public override string? ToString()
         {
-
             return $"Num: {NumCoureur}, Nom: {NomCoureur}, Prenom: {PrenomCoureur}, Ville: {VilleCoureur}, Federation: {NumFederation}"; ;
         }
     }
