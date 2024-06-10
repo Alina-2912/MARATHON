@@ -295,7 +295,7 @@
             x:Name="RechercheCoureurs"
             Grid.Row="1"
             Margin="70,10,100,0"
-            Visibility="Visible">
+            Visibility="Hidden">
 
             <Border CornerRadius="10,10,0,0">
                 <Border.Background>
@@ -399,21 +399,24 @@
                     Height="30"
                     Margin="169,9,83,21"
                     Click="Button_Suivant_2"
+                    Visibility="Hidden"
                     Content="Suivant" FontSize="14" />
 
                 <Button
                     Width="75"
                     Height="30"
                     Margin="10,9,249,21"
+                    Visibility="Hidden"
                     Click="Button_Precedent_1"
                     Content="Precedent" FontSize="14" />
                 <Button
                     Height="30"
                     Margin="109,9,189,21"
                     Click="Button_Rechercher"
-                    Content="" FontSize="14" 
-                    >
-  
+                    Content="" FontSize="14">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/img/rechercherImage.jpg"/>
+                    </Button.Background>
                 </Button>
             </Grid>
 
@@ -493,13 +496,6 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-
-                </Button>
-                <Button
-                    Height="30"
-                    Margin="151,11,147,19"
-                    Click="Button_Rechercher"
-                    Content="" FontSize="14" >
 
                 </Button>
 

@@ -21,6 +21,7 @@
     <None Remove="img\montagne.jpg" />
     <None Remove="img\obstacle.jpg" />
     <None Remove="img\rechercher.png" />
+    <None Remove="img\rechercherImage.jpg" />
     <None Remove="img\souvgarder.png" />
     <None Remove="img\supprimer.png" />
   </ItemGroup>
@@ -68,6 +69,9 @@
     </Resource>
     <Resource Include="img\rechercher.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\rechercherImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\souvgarder.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

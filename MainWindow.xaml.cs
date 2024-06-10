@@ -62,81 +62,81 @@ namespace SAE_201_MARATHON
         }
         /*    --------------------    BUTTONS      -------------------      */
 
-        //public void ButtonConnexion(object sender, RoutedEventArgs e)
-        //{
-        //    string login = tbLogin.Text;
-        //    string password = pswrdBox.Password;
-
-        //    string connectionString = $"Server=srv-peda-new;" +
-        //                              "port=5433;" +
-        //                              "Database=beaune_sae;" +
-        //                              "Search Path=wpfcourse;" +
-        //                              $"uid={login};" +
-        //                              $"password={password};";
-
-        //    using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-        //    {
-        //        try
-        //        {
-        //            connection.Open();
-
-        //            // If connection is successful, change the stack panel visibility
-        //            stackPanelConnexion.Visibility = Visibility.Hidden;
-        //            RechercheCourse.Visibility = Visibility.Visible;
-        //            gridCourse.Visibility = Visibility.Visible;
-        //            RechercheCourseBorder.Visibility = Visibility.Visible;
-        //            lbTitreSelectionnercourse.Visibility = Visibility.Visible;
-
-        //            lbConnexion.Visibility = Visibility.Visible;
-        //            labelRechercheCourse.Visibility = Visibility.Visible;
-        //            labelRechercheCoureurs.Visibility = Visibility.Visible;
-        //            labelSelectionneCoureurs.Visibility = Visibility.Visible;
-        //            labelbMontantTotal.Visibility = Visibility.Visible;
-
-        //            lbDeconnexion.Visibility = Visibility.Visible;
-        //            borderlbDeconnex.Visibility = Visibility.Visible;
-        //            lbDeconnexion.Background = Brushes.LightPink;
-        //            lbDeconnexion.TextDecorations = null;
-        //            labelRechercheCoureurs.Background = Brushes.LightPink;
-        //            labelRechercheCoureurs.TextDecorations = null;
-
-        //            labelRechercheCourse.Background = Brushes.HotPink;
-        //            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            // Handle exceptions and display error message
-        //            MessageBox.Show("Identifiant ou mot de passe incorrect", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
-        //        }
-        //    }
-        //}
-
-
         public void ButtonConnexion(object sender, RoutedEventArgs e)
         {
+            string login = tbLogin.Text;
+            string password = pswrdBox.Password;
 
-            stackPanelConnexion.Visibility = Visibility.Hidden;
-            RechercheCourse.Visibility = Visibility.Visible;
-            gridCourse.Visibility = Visibility.Visible;
-            RechercheCourseBorder.Visibility = Visibility.Visible;
-            lbTitreSelectionnercourse.Visibility = Visibility.Visible;
+            string connectionString = $"Server=srv-peda-new;" +
+                                      "port=5433;" +
+                                      "Database=beaune_sae;" +
+                                      "Search Path=wpfcourse;" +
+                                      $"uid={login};" +
+                                      $"password={password};";
 
-            lbDeconnexion.Visibility = Visibility.Visible;
-            borderlbDeconnex.Visibility = Visibility.Visible;
-            labelRechercheCourse.Visibility = Visibility.Visible;
-            labelRechercheCoureurs.Visibility = Visibility.Visible;
-            labelSelectionneCoureurs.Visibility = Visibility.Visible;
-            labelbMontantTotal.Visibility = Visibility.Visible;
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
 
-            lbDeconnexion.Background = Brushes.LightPink;
-            lbDeconnexion.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.LightPink;
-            labelRechercheCoureurs.TextDecorations = null;
+                    // If connection is successful, change the stack panel visibility
+                    stackPanelConnexion.Visibility = Visibility.Hidden;
+                    RechercheCourse.Visibility = Visibility.Visible;
+                    gridCourse.Visibility = Visibility.Visible;
+                    RechercheCourseBorder.Visibility = Visibility.Visible;
+                    lbTitreSelectionnercourse.Visibility = Visibility.Visible;
 
-            labelRechercheCourse.Background = Brushes.HotPink;
-            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+                    lbDeconnexion.Visibility = Visibility.Visible;
+                    labelRechercheCourse.Visibility = Visibility.Visible;
+                    labelRechercheCoureurs.Visibility = Visibility.Visible;
+                    labelSelectionneCoureurs.Visibility = Visibility.Visible;
+                    labelbMontantTotal.Visibility = Visibility.Visible;
 
+                    lbDeconnexion.Visibility = Visibility.Visible;
+                    borderlbDeconnex.Visibility = Visibility.Visible;
+                    lbDeconnexion.Background = Brushes.LightPink;
+                    lbDeconnexion.TextDecorations = null;
+                    labelRechercheCoureurs.Background = Brushes.LightPink;
+                    labelRechercheCoureurs.TextDecorations = null;
+
+                    labelRechercheCourse.Background = Brushes.HotPink;
+                    labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+                }
+                catch (Exception ex)
+                {
+                    // Handle exceptions and display error message
+                    MessageBox.Show("Identifiant ou mot de passe incorrect", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
+
+
+        //public void ButtonConnexion(object sender, RoutedEventArgs e)
+        //{
+
+        //    stackPanelConnexion.Visibility = Visibility.Hidden;
+        //    RechercheCourse.Visibility = Visibility.Visible;
+        //    gridCourse.Visibility = Visibility.Visible;
+        //    RechercheCourseBorder.Visibility = Visibility.Visible;
+        //    lbTitreSelectionnercourse.Visibility = Visibility.Visible;
+
+        //    lbDeconnexion.Visibility = Visibility.Visible;
+        //    borderlbDeconnex.Visibility = Visibility.Visible;
+        //    labelRechercheCourse.Visibility = Visibility.Visible;
+        //    labelRechercheCoureurs.Visibility = Visibility.Visible;
+        //    labelSelectionneCoureurs.Visibility = Visibility.Visible;
+        //    labelbMontantTotal.Visibility = Visibility.Visible;
+
+        //    lbDeconnexion.Background = Brushes.LightPink;
+        //    lbDeconnexion.TextDecorations = null;
+        //    labelRechercheCoureurs.Background = Brushes.LightPink;
+        //    labelRechercheCoureurs.TextDecorations = null;
+
+        //    labelRechercheCourse.Background = Brushes.HotPink;
+        //    labelRechercheCourse.TextDecorations = TextDecorations.Underline;
+
+        //}
 
 
 
