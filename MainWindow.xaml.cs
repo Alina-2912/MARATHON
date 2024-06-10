@@ -1,6 +1,7 @@
 using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -53,6 +54,7 @@ namespace SAE_201_MARATHON
         //            stackPanelConnexion.Visibility = Visibility.Hidden;
         //            RechercheCourse.Visibility = Visibility.Visible;
         //            gridCourse.Visibility = Visibility.Visible;
+        //            RechercheCourseBorder.Visibility = Visibility.Visible;
 
         //            lbConnexion.Visibility = Visibility.Visible;
         //            labelRechercheCourse.Visibility = Visibility.Visible;
@@ -60,12 +62,12 @@ namespace SAE_201_MARATHON
         //            labelSelectionneCoureurs.Visibility = Visibility.Visible;
         //            labelbMontantTotal.Visibility = Visibility.Visible;
 
-        //            lbConnexion.Background = Brushes.LawnGreen;
+        //            lbConnexion.Background = Brushes.LightPink;
         //            lbConnexion.TextDecorations = null;
-        //            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+        //            labelRechercheCoureurs.Background = Brushes.LightPink;
         //            labelRechercheCoureurs.TextDecorations = null;
 
-        //            labelRechercheCourse.Background = Brushes.GreenYellow;
+        //            labelRechercheCourse.Background = Brushes.HotPink;
         //            labelRechercheCourse.TextDecorations = TextDecorations.Underline;
         //        }
         //        catch (Exception ex)
@@ -83,19 +85,21 @@ namespace SAE_201_MARATHON
             stackPanelConnexion.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Visible;
             gridCourse.Visibility = Visibility.Visible;
+            RechercheCourseBorder.Visibility = Visibility.Visible;
 
-            lbConnexion.Visibility = Visibility.Visible;
+            lbDeconnexion.Visibility = Visibility.Visible;
+            borderlbDeconnex.Visibility = Visibility.Visible;
             labelRechercheCourse.Visibility = Visibility.Visible;
             labelRechercheCoureurs.Visibility = Visibility.Visible;
             labelSelectionneCoureurs.Visibility = Visibility.Visible;
             labelbMontantTotal.Visibility = Visibility.Visible;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
             labelRechercheCoureurs.TextDecorations = null;
 
-            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.Background = Brushes.HotPink;
             labelRechercheCourse.TextDecorations = TextDecorations.Underline;
 
         }
@@ -115,20 +119,21 @@ namespace SAE_201_MARATHON
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Visible;
             ListeRechercheCoureurs.Visibility = Visibility.Visible;
+            RechercheCourseBorder.Visibility = Visibility.Hidden;
 
             gridCourse.Visibility = Visibility.Hidden;
 
-            labelRechercheCoureurs.Background = Brushes.GreenYellow;
+            labelRechercheCoureurs.Background = Brushes.HotPink;
             labelRechercheCoureurs.TextDecorations = TextDecorations.Underline;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCourse.TextDecorations = null;
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
 
             labelSelectionneCoureurs.TextDecorations = null;
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
         }
 
         private void Button_Suivant_2(object sender, RoutedEventArgs e)
@@ -137,39 +142,40 @@ namespace SAE_201_MARATHON
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             SelectionCoureurs.Visibility = Visibility.Visible;
 
-            labelSelectionneCoureurs.Background = Brushes.GreenYellow;
+            labelSelectionneCoureurs.Background = Brushes.HotPink;
             labelSelectionneCoureurs.TextDecorations = TextDecorations.Underline;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCourse.TextDecorations = null;
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
 
             labelRechercheCoureurs.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
         }
 
         private void Button_Precedent_1(object sender, RoutedEventArgs e)
         {
             RechercheCourse.Visibility = Visibility.Visible;
+            RechercheCourseBorder.Visibility = Visibility.Visible;
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Visible;
 
-            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.Background = Brushes.HotPink;
             labelRechercheCourse.TextDecorations = TextDecorations.Underline;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCoureurs.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.GreenYellow;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
 
-            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.Background = Brushes.LightPink;
             labelbMontantTotal.TextDecorations = null;
 
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
             labelSelectionneCoureurs.TextDecorations = null;
         }
 
@@ -179,19 +185,19 @@ namespace SAE_201_MARATHON
             ListeRechercheCoureurs.Visibility = Visibility.Visible;
             SelectionCoureurs.Visibility = Visibility.Hidden;
 
-            labelRechercheCoureurs.Background = Brushes.GreenYellow;
+            labelRechercheCoureurs.Background = Brushes.HotPink;
             labelRechercheCoureurs.TextDecorations = TextDecorations.Underline;
 
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
             labelSelectionneCoureurs.TextDecorations = null;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
             labelRechercheCourse.TextDecorations = null;
 
-            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.Background = Brushes.LightPink;
             labelbMontantTotal.TextDecorations = null;
         }
         private void Button_Suivant_3(object sender, RoutedEventArgs e)
@@ -199,19 +205,19 @@ namespace SAE_201_MARATHON
             SelectionCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Visible;
 
-            labelbMontantTotal.Background = Brushes.GreenYellow;
+            labelbMontantTotal.Background = Brushes.HotPink;
             labelbMontantTotal.TextDecorations = TextDecorations.Underline;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCourse.TextDecorations = null;
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
 
             labelRechercheCoureurs.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
 
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
             labelSelectionneCoureurs.TextDecorations = null;
         }
 
@@ -226,19 +232,19 @@ namespace SAE_201_MARATHON
             SelectionCoureurs.Visibility = Visibility.Visible;
             ConfirmationInscription.Visibility = Visibility.Hidden;
 
-            labelSelectionneCoureurs.Background = Brushes.GreenYellow;
+            labelSelectionneCoureurs.Background = Brushes.HotPink;
             labelSelectionneCoureurs.TextDecorations = TextDecorations.Underline;
 
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
             labelRechercheCoureurs.TextDecorations = null;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
             labelRechercheCourse.TextDecorations = null;
 
-            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.Background = Brushes.LightPink;
             labelbMontantTotal.TextDecorations = null;
         }
 
@@ -246,22 +252,24 @@ namespace SAE_201_MARATHON
         {
             stackPanelConnexion.Visibility = Visibility.Visible;
             RechercheCourse.Visibility = Visibility.Hidden;
+            RechercheCourseBorder.Visibility = Visibility.Hidden;
 
-            lbConnexion.Background = Brushes.GreenYellow;
-            lbConnexion.TextDecorations = TextDecorations.Underline;
+            lbDeconnexion.Background = Brushes.HotPink;
+            lbDeconnexion.TextDecorations = TextDecorations.Underline;
 
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
             labelRechercheCourse.TextDecorations = null;
 
             labelRechercheCoureurs.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
 
             gridCourse.Visibility = Visibility.Hidden;
 
             tbLogin.Text = string.Empty;
             pswrdBox.Password = string.Empty;
 
-            lbConnexion.Visibility = Visibility.Visible;
+            lbDeconnexion.Visibility = Visibility.Hidden;
+            borderlbDeconnex.Visibility = Visibility.Hidden;
             labelRechercheCourse.Visibility = Visibility.Hidden;
             labelRechercheCoureurs.Visibility = Visibility.Hidden;
             labelbMontantTotal.Visibility = Visibility.Hidden;
@@ -269,36 +277,39 @@ namespace SAE_201_MARATHON
         }
 
         /*    --------------------    LABELS      -------------------      */
-        private void connexionLabelClick(object sender, MouseButtonEventArgs e)
+        private void DeconnexionLabelClick(object sender, MouseButtonEventArgs e)
         {
             stackPanelConnexion.Visibility = Visibility.Visible;
 
             RechercheCourse.Visibility = Visibility.Hidden;
+            RechercheCourseBorder.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             SelectionCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Hidden;
+            lbDeconnexion.Visibility = Visibility.Hidden;
+            borderlbDeconnex.Visibility = Visibility.Hidden;
 
-            lbConnexion.Background = Brushes.GreenYellow;
-            lbConnexion.TextDecorations = TextDecorations.Underline;
+            lbDeconnexion.Background = Brushes.HotPink;
+            lbDeconnexion.TextDecorations = TextDecorations.Underline;
 
             labelRechercheCourse.Visibility = Visibility.Hidden;
             labelRechercheCoureurs.Visibility = Visibility.Hidden;
             labelSelectionneCoureurs.Visibility = Visibility.Hidden;
             labelbMontantTotal.Visibility = Visibility.Hidden;
 
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
             labelRechercheCourse.TextDecorations = null;
 
             labelRechercheCoureurs.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
 
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
             labelSelectionneCoureurs.TextDecorations = null;
 
-            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.Background = Brushes.LightPink;
             labelbMontantTotal.TextDecorations = null;
 
             tbLogin.Text = string.Empty;
@@ -307,6 +318,7 @@ namespace SAE_201_MARATHON
         private void rechercherCourseLabelClick(object sender, MouseButtonEventArgs e)
         {
             RechercheCourse.Visibility = Visibility.Visible;
+            RechercheCourseBorder.Visibility = Visibility.Visible;
 
             stackPanelConnexion.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Hidden;
@@ -316,19 +328,19 @@ namespace SAE_201_MARATHON
             ConfirmationInscription.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Visible;
 
-            labelRechercheCourse.Background = Brushes.GreenYellow;
+            labelRechercheCourse.Background = Brushes.HotPink;
             labelRechercheCourse.TextDecorations = TextDecorations.Underline;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCoureurs.TextDecorations = null;
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
 
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
             labelSelectionneCoureurs.TextDecorations = null;
 
-            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.Background = Brushes.LightPink;
             labelbMontantTotal.TextDecorations = null;
 
         }
@@ -341,24 +353,25 @@ namespace SAE_201_MARATHON
 
             SelectionCoureurs.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Hidden;
+            RechercheCourseBorder.Visibility = Visibility.Hidden;
             stackPanelConnexion.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Hidden;
 
-            labelRechercheCoureurs.Background = Brushes.GreenYellow;
+            labelRechercheCoureurs.Background = Brushes.HotPink;
             labelRechercheCoureurs.TextDecorations = TextDecorations.Underline;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCourse.TextDecorations = null;
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
 
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
             labelSelectionneCoureurs.TextDecorations = null;
 
-            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.Background = Brushes.LightPink;
             labelbMontantTotal.TextDecorations = null;
         }
 
@@ -370,24 +383,25 @@ namespace SAE_201_MARATHON
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Hidden;
+            RechercheCourseBorder.Visibility = Visibility.Hidden;
             stackPanelConnexion.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Hidden;
 
-            labelSelectionneCoureurs.Background = Brushes.GreenYellow;
+            labelSelectionneCoureurs.Background = Brushes.HotPink;
             labelSelectionneCoureurs.TextDecorations = TextDecorations.Underline;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCourse.TextDecorations = null;
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
 
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
             labelRechercheCoureurs.TextDecorations = null;
 
-            labelbMontantTotal.Background = Brushes.LawnGreen;
+            labelbMontantTotal.Background = Brushes.LightPink;
             labelbMontantTotal.TextDecorations = null;
         }
         private void montantTotalLabelClick(object sender, MouseButtonEventArgs e)
@@ -398,22 +412,23 @@ namespace SAE_201_MARATHON
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Hidden;
+            RechercheCourseBorder.Visibility = Visibility.Hidden;
             stackPanelConnexion.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Hidden;
 
-            labelbMontantTotal.Background = Brushes.GreenYellow;
+            labelbMontantTotal.Background = Brushes.HotPink;
             labelbMontantTotal.TextDecorations = TextDecorations.Underline;
 
-            labelSelectionneCoureurs.Background = Brushes.LawnGreen;
+            labelSelectionneCoureurs.Background = Brushes.LightPink;
             labelSelectionneCoureurs.TextDecorations = null;
 
-            lbConnexion.Background = Brushes.LawnGreen;
-            lbConnexion.TextDecorations = null;
+            lbDeconnexion.Background = Brushes.LightPink;
+            lbDeconnexion.TextDecorations = null;
 
             labelRechercheCourse.TextDecorations = null;
-            labelRechercheCourse.Background = Brushes.LawnGreen;
+            labelRechercheCourse.Background = Brushes.LightPink;
 
-            labelRechercheCoureurs.Background = Brushes.LawnGreen;
+            labelRechercheCoureurs.Background = Brushes.LightPink;
             labelRechercheCoureurs.TextDecorations = null;
         }
         private void butModifier_Click(object sender, RoutedEventArgs e)
@@ -460,7 +475,6 @@ namespace SAE_201_MARATHON
 
 
     }
-
 
 
 }

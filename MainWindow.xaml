@@ -63,15 +63,23 @@
             <StackPanel.Background>
                 <ImageBrush ImageSource="/img/foret.jpg" />
             </StackPanel.Background>
-            <Label
-                Width="136"
-                Height="43"
-                Margin="0,15,0,0"
-                Background="#FF4D965F"
+
+            <Border CornerRadius="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10,1,10,1" Margin="0,15,0,0" >
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF215C2F"/>
+                        <GradientStop Color="#FF4D965F" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Label
                 Content="Connexion"
                 FontSize="24"
                 FontWeight="Bold"
-                Foreground="White" />
+                Foreground="White">
+                </Label>
+            </Border>
+
+
             <Label
                 Height="29"
                 Margin="0,15,0,0"
@@ -118,64 +126,93 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <StackPanel
-            x:Name="RechercheCourse" 
-            Width="288"
-            Height="235"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Visibility="Hidden" Grid.Row="1">
-            <StackPanel.Background>
+
+        <Border 
+            x:Name="RechercheCourseBorder" 
+            Visibility="Hidden" 
+            Grid.Row="1" 
+            VerticalAlignment="Center" 
+            CornerRadius="15" Padding="20,20,20,10" Margin="75,0,75,0">
+            <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#CC84138E"/>
                     <GradientStop Color="#CCD51515" Offset="1"/>
                 </LinearGradientBrush>
-            </StackPanel.Background>
+            </Border.Background>
+            <StackPanel x:Name="RechercheCourse"
+                        Visibility="Hidden" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,0">
+                <Label Foreground="White" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="16" />
+                <ComboBox x:Name="choixCourse" FontSize="14" SelectionChanged="ContenuMontant">
+                    <ComboBoxItem Name="choixMarathon" Content="Marathon" />
+                    <ComboBoxItem Name="choixSemiMarathon" Content="Semi Marathon" />
+                    <ComboBoxItem Name="choix10km" Content="10 Km" />
+                    <ComboBoxItem Name="choixDuo" Content="Duo" />
+                    <ComboBoxItem Name="choixRelais" Content="Relais" />
+                </ComboBox>
+                <Label Foreground="White" Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" FontSize="16" />
+                <DatePicker x:Name="choixDate" FontSize="14" />
+                <Grid Height="74" HorizontalAlignment="Stretch">
+                    <Button
+                        FontWeight="Bold"
+                        Width="80"
+                        Height="30"
+                        Click="Button_Suivant_1"
+                        Content="Suivant"
+                        IsDefault="True" Margin="180,22,25,22" FontSize="14" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Button.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF232323"/>
+                                <GradientStop Color="#FF878787" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.BorderBrush>
+                        <Button.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FF390E7A"/>
+                                <GradientStop Color="#FF5B4879" Offset="1"/>
+                            </RadialGradientBrush>
+                        </Button.Background>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="1,1,1,1" 
+                                    CornerRadius="20">
+                                    <ContentPresenter 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button
+                        Width="120"
+                        Height="30"
+                        FontWeight="Bold"
+                        Click="Button_Deconnexion"
+                        Content="Se deconnecter" Margin="25,22,180,22" FontSize="14" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Background="{TemplateBinding Background}" 
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="1,1,1,1" 
+                                    CornerRadius="20">
+                                    <ContentPresenter 
+                                        HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Border>
 
-            <Label Foreground="White" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="14" />
-            <ComboBox x:Name="choixCourse" FontSize="14" SelectionChanged="ContenuMontant">
-                <ComboBoxItem Name="choixMarathon" Content="Marathon" />
-                <ComboBoxItem Name="choixSemiMarathon" Content="Semi Marathon" />
-                <ComboBoxItem Name="choix10km" Content="10 Km" />
-                <ComboBoxItem Name="choixDuo" Content="Duo" />
-                <ComboBoxItem Name="choixRelais" Content="Relais" />
-            </ComboBox>
-            <Label Foreground="White" Content="Sélectionner la date" Target="{Binding ElementName=choixDate}" FontSize="14" />
-            <DatePicker x:Name="choixDate" FontSize="14" />
-            <Grid Height="74" HorizontalAlignment="Stretch">
-                <Button
-                    FontWeight="Bold"
-                    Width="83"
-                    Height="30"
-                    Click="Button_Suivant_1"
-                    Content="Suivant"
-                    IsDefault="True" Margin="180,22,24,22" FontSize="14" Foreground="White" >
-                    <Button.Background>
-                        <RadialGradientBrush>
-                            <GradientStop Color="#FF240676" Offset="0.366"/>
-                            <GradientStop Color="#FF523F86" Offset="1"/>
-                        </RadialGradientBrush>
-                    </Button.Background>
-                </Button>
-                <Button
-                    FontWeight="Bold"
-                    Height="30"
-                    Click="Button_Deconnexion"
-                    Content="Se deconnecter" Margin="10,22,165,22" FontSize="14" Foreground="Red" />
-            </Grid>
-
-        </StackPanel>
         <StackPanel
             x:Name="RechercheCoureurs"
             Visibility="Hidden" Grid.Row="1" Margin="100,50,100,0">
-            <!--<Label Foreground="White" Content="Entrez le nom" Target="{Binding ElementName=tbNomCoureurSelectionne}" FontSize="14"  >
-                <Label.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF5B4879"/>
-                        <GradientStop Color="#FF390E7A" Offset="1"/>
-                    </LinearGradientBrush>
-                </Label.Background>
-            </Label>-->
+            
             <Border CornerRadius="10,10,0,0" >
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -262,7 +299,7 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn
                         Width="30"
-                        Binding="{Binding Id}"
+                        Binding="{Binding NumCoureur}"
                         Header="Id" 
                         CellStyle="{StaticResource ColumnCellStyle}"
                         HeaderStyle="{StaticResource ColumnHeaderStyle}"/>
@@ -338,12 +375,6 @@
                 </Button>
 
 
-                <!--<Button
-                    Width="75"
-                    Height="30"
-                    Margin="28,7,217,15"
-                    Click="Button_Precedent_1"
-                    Content="Precedent" FontSize="14" />-->
 
                 <Button
                     Width="100"
@@ -669,55 +700,65 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock x:Name="lbConnexion" 
-   Text="Se deconnecter" 
-   Height="32" 
-  
-   TextAlignment="Center"
-   Background="LawnGreen"
-   MouseLeftButtonUp="connexionLabelClick"
-   Cursor="Hand"
-   Visibility="Hidden" FontSize="14" Margin="5,0,0,0"/>
+            <Border 
+                Name="borderlbDeconnex"
+                CornerRadius="15" 
+                Background="LightPink" 
+                Margin="0,0,0,0" 
+                Height="32" Padding="5,0,6,0"
+                Visibility="Hidden" >
+                <TextBlock x:Name="lbDeconnexion" 
+                    Text="Se deconnecter" 
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    MouseLeftButtonUp="DeconnexionLabelClick"
+                    Cursor="Hand"
+                    Visibility="Hidden" 
+                    FontSize="12"
+                    FontWeight="Bold"
+                    Margin="0"/>
+            </Border>
+
             <TextBlock x:Name="labelRechercheCourse" 
-   Text="Rechercher la course" 
-   Height="32" 
-   TextAlignment="Center"
+                   Text="Rechercher la course" 
+                   Height="32" 
+                   TextAlignment="Center"
   
-   Visibility="Hidden"
-   Background="LawnGreen"
-   Cursor="Hand"
-   MouseLeftButtonUp="rechercherCourseLabelClick" FontSize="14" Margin="10,0,0,0"/>
+                   Visibility="Hidden"
+                   Background="LightPink"
+                   Cursor="Hand"
+                   MouseLeftButtonUp="rechercherCourseLabelClick" FontSize="14" Margin="10,0,0,0"/>
             <TextBlock x:Name="labelRechercheCoureurs" 
-   Text="Rechercher les coureurs" 
-   HorizontalAlignment="Left" 
-   Height="32" 
-   VerticalAlignment="Center" 
+                   Text="Rechercher les coureurs" 
+                   HorizontalAlignment="Left" 
+                   Height="32" 
+                   VerticalAlignment="Center" 
 
-   TextAlignment="Center"
-   Background="LawnGreen"
-   Cursor="Hand"
-   Visibility="Hidden"
-   MouseLeftButtonUp="rechercherCoureursLabelClick" FontSize="14" Margin="10,0,0,0"
-   />
+                   TextAlignment="Center"
+                   Background="LightPink"
+                   Cursor="Hand"
+                   Visibility="Hidden"
+                   MouseLeftButtonUp="rechercherCoureursLabelClick" FontSize="14" Margin="10,0,0,0"
+                   />
             <TextBlock x:Name="labelSelectionneCoureurs" 
-Text="Selectionner les coureurs" 
-Height="32" 
+                Text="Selectionner les coureurs" 
+                Height="32" 
 
-TextAlignment="Center"
-Background="LawnGreen"
-Cursor="Hand"
-Visibility="Hidden"
-MouseLeftButtonUp="selectionnerCoureursLabelClick" FontSize="14" Grid.ColumnSpan="2" Margin="10,0,0,0"
-   />
+                TextAlignment="Center"
+                Background="LightPink"
+                Cursor="Hand"
+                Visibility="Hidden"
+                MouseLeftButtonUp="selectionnerCoureursLabelClick" FontSize="14" Grid.ColumnSpan="2" Margin="10,0,0,0"
+                   />   
             <TextBlock x:Name="labelbMontantTotal" 
-Text="Montant total" 
-Height="32" 
+                Text="Montant total" 
+                Height="32" 
 
-TextAlignment="Center"
-Background="LawnGreen"
-MouseLeftButtonUp="montantTotalLabelClick"
-Cursor="Hand"
-Visibility="Hidden" FontSize="14" Grid.Column="1" Margin="10,0,0,0"/>
+                TextAlignment="Center"
+                Background="LightPink"
+                MouseLeftButtonUp="montantTotalLabelClick"
+                Cursor="Hand"
+                Visibility="Hidden" FontSize="14" Grid.Column="1" Margin="10,0,0,0"/>
         </StackPanel>
 
 
