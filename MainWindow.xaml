@@ -480,17 +480,23 @@
             Grid.ColumnSpan="2"
             Width="360"
             Height="285"
-            Margin="245,0,0,0"
-            HorizontalAlignment="Left"
+            HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Background="White"
             Visibility="Hidden">
 
-            <Label
-                Background="#FFD1D1D1"
-                Content="Sélectionner le coureur"
-                FontSize="14"
-                Foreground="Black" />
+            <Border CornerRadius="10,10,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FF5B4879" />
+                        <GradientStop Offset="1" Color="#FF390E7A" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Label
+                    
+                    Content="Sélectionner le coureur"
+                    FontSize="14"
+                    Foreground="White" />
+            </Border>
 
             <ComboBox x:Name="cbCoureurs" FontSize="14" >
                 <ComboBox.ItemTemplate>
@@ -504,19 +510,52 @@
                 </ComboBox.ItemTemplate>
             </ComboBox>
             <Label
-                Background="#FFD1D1D1"
                 Content="Sélectionner la date"
                 FontSize="14"
-                Foreground="Black" />
+                Foreground="White">
+                <Label.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FF5B4879" />
+                        <GradientStop Offset="1" Color="#FF390E7A" />
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
             <DatePicker FontSize="14" />
             <Label
-                Background="#FFD1D1D1"
                 Content="Saisir des numéros de téléphones d’amis (pas obligatoire) "
                 FontSize="14"
-                Foreground="Black" />
-            <TextBox Margin="0,3,0,0" FontSize="14" />
-            <TextBox Margin="0,3,0,0" FontSize="14" />
-            <TextBox Margin="0,3,0,0" FontSize="14" />
+                Foreground="White">
+                <Label.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FF5B4879" />
+                        <GradientStop Offset="1" Color="#FF390E7A" />
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <TextBox Margin="0,3,0,0" FontSize="14">
+                <TextBox.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FFDAA8A8" />
+                        <GradientStop Offset="1" Color="#FFEDCDCD" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox Margin="0,3,0,0" FontSize="14">
+                <TextBox.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FFDAA8A8" />
+                        <GradientStop Offset="1" Color="#FFEDCDCD" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox Margin="0,3,0,0" FontSize="14">
+                <TextBox.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#FFDAA8A8" />
+                        <GradientStop Offset="1" Color="#FFEDCDCD" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
                     Width="75"
@@ -524,14 +563,63 @@
                     Margin="220,7,43,10"
                     Click="Button_Suivant_3"
                     Content="Suivant"
-                    FontSize="14" />
+                    FontSize="14" Foreground="White"
+                    FontWeight="Bold">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#FF232323" />
+                            <GradientStop Offset="1" Color="#FF878787" />
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF390E7A" />
+                            <GradientStop Offset="1" Color="#FF5B4879" />
+                        </RadialGradientBrush>
+                    </Button.Background>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="3,3,3,3"
+                                CornerRadius="20">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <Button
                     Width="75"
                     Height="30"
                     Margin="28,7,217,15"
                     Click="Button_Precedent_2"
                     Content="Precedent"
-                    FontSize="14" />
+                    FontSize="14" FontWeight="Bold" Foreground="White">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#FF232323" />
+                            <GradientStop Offset="1" Color="#FF878787" />
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF390E7A" />
+                            <GradientStop Offset="1" Color="#FF5B4879" />
+                        </RadialGradientBrush>
+                    </Button.Background>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="3,3,3,3"
+                                CornerRadius="20">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
         </StackPanel>
         <StackPanel
@@ -566,6 +654,7 @@
                 BorderBrush="Black"
                 BorderThickness="1"
                 FontSize="18"
+                Content="???"
                 FontWeight="Bold" />
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
