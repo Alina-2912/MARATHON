@@ -294,7 +294,7 @@
         <StackPanel
             x:Name="RechercheCoureurs"
             Grid.Row="1"
-            Margin="100,160,100,0"
+            Margin="70,10,100,0"
             Visibility="Visible">
 
             <Border CornerRadius="10,10,0,0">
@@ -377,24 +377,48 @@
                 </Label.Background>
             </Label>
 
-            <Border CornerRadius="0,0,10,10">
-                <DataGrid
+
+            <DataGrid
              x:Name="dgCoureurs"
             MinHeight="150"
             AutoGenerateColumns="False"
             IsReadOnly="False"
             ItemsSource="{Binding}" 
                 Height="173">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Width="30" Binding="{Binding NumCoureur}" Header="Id" />
-                        <DataGridTextColumn Width="80" Binding="{Binding NomCoureur}" Header="Nom" />
-                        <DataGridTextColumn Width="80" Binding="{Binding PrenomCoureur}" Header="Prenom" />
-                        <DataGridTextColumn Width="80" Binding="{Binding VilleCoureur}" Header="Ville" />
-                        <DataGridTextColumn Width="80" Binding="{Binding NumFederation}" Header="Federation" />
-                        <DataGridTextColumn Width="80" Binding="{Binding CodeClub}" Header="Code club" />
-                    </DataGrid.Columns>
-                </DataGrid>
-            </Border>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="30" Binding="{Binding NumCoureur}" Header="Id" />
+                    <DataGridTextColumn Width="80" Binding="{Binding NomCoureur}" Header="Nom" />
+                    <DataGridTextColumn Width="80" Binding="{Binding PrenomCoureur}" Header="Prenom" />
+                    <DataGridTextColumn Width="80" Binding="{Binding VilleCoureur}" Header="Ville" />
+                    <DataGridTextColumn Width="80" Binding="{Binding NumFederation}" Header="Federation" />
+                    <DataGridTextColumn Width="80" Binding="{Binding CodeClub}" Header="Code club" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid Height="60" HorizontalAlignment="Stretch" Width="328">
+                <Button
+                    Height="30"
+                    Margin="169,9,83,21"
+                    Click="Button_Suivant_2"
+                    Content="Suivant" FontSize="14" />
+
+                <Button
+                    Width="75"
+                    Height="30"
+                    Margin="10,9,249,21"
+                    Click="Button_Precedent_1"
+                    Content="Precedent" FontSize="14" />
+                <Button
+                    Height="30"
+                    Margin="109,9,189,21"
+                    Click="Button_Rechercher"
+                    Content="" FontSize="14" 
+                    >
+  
+                </Button>
+            </Grid>
+
+
+
 
             <Grid
                 Height="80"
@@ -469,8 +493,15 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                </Button>
 
+                </Button>
+                <Button
+                    Height="30"
+                    Margin="151,11,147,19"
+                    Click="Button_Rechercher"
+                    Content="" FontSize="14" >
+
+                </Button>
 
             </Grid>
         </StackPanel>
