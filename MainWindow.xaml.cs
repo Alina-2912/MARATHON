@@ -55,6 +55,7 @@ namespace SAE_201_MARATHON
         //            RechercheCourse.Visibility = Visibility.Visible;
         //            gridCourse.Visibility = Visibility.Visible;
         //            RechercheCourseBorder.Visibility = Visibility.Visible;
+        //            lbTitreSelectionnercourse.Visibility = Visibility.Visible;
 
         //            lbConnexion.Visibility = Visibility.Visible;
         //            labelRechercheCourse.Visibility = Visibility.Visible;
@@ -62,8 +63,10 @@ namespace SAE_201_MARATHON
         //            labelSelectionneCoureurs.Visibility = Visibility.Visible;
         //            labelbMontantTotal.Visibility = Visibility.Visible;
 
-        //            lbConnexion.Background = Brushes.LightPink;
-        //            lbConnexion.TextDecorations = null;
+        //            lbDeconnexion.Visibility = Visibility.Visible;
+        //            borderlbDeconnex.Visibility = Visibility.Visible;
+        //            lbDeconnexion.Background = Brushes.LightPink;
+        //            lbDeconnexion.TextDecorations = null;
         //            labelRechercheCoureurs.Background = Brushes.LightPink;
         //            labelRechercheCoureurs.TextDecorations = null;
 
@@ -86,6 +89,7 @@ namespace SAE_201_MARATHON
             RechercheCourse.Visibility = Visibility.Visible;
             gridCourse.Visibility = Visibility.Visible;
             RechercheCourseBorder.Visibility = Visibility.Visible;
+            lbTitreSelectionnercourse.Visibility = Visibility.Visible;
 
             lbDeconnexion.Visibility = Visibility.Visible;
             borderlbDeconnex.Visibility = Visibility.Visible;
@@ -120,6 +124,7 @@ namespace SAE_201_MARATHON
             RechercheCoureurs.Visibility = Visibility.Visible;
             ListeRechercheCoureurs.Visibility = Visibility.Visible;
             RechercheCourseBorder.Visibility = Visibility.Hidden;
+            lbTitreSelectionnercourse.Visibility = Visibility.Hidden;
 
             gridCourse.Visibility = Visibility.Hidden;
 
@@ -141,6 +146,8 @@ namespace SAE_201_MARATHON
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             SelectionCoureurs.Visibility = Visibility.Visible;
+            RechercheCourseBorder.Visibility = Visibility.Hidden;
+            lbTitreSelectionnercourse.Visibility = Visibility.Hidden;
 
             labelSelectionneCoureurs.Background = Brushes.HotPink;
             labelSelectionneCoureurs.TextDecorations = TextDecorations.Underline;
@@ -159,6 +166,7 @@ namespace SAE_201_MARATHON
         {
             RechercheCourse.Visibility = Visibility.Visible;
             RechercheCourseBorder.Visibility = Visibility.Visible;
+            lbTitreSelectionnercourse.Visibility = Visibility.Visible;
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Visible;
@@ -253,6 +261,7 @@ namespace SAE_201_MARATHON
             stackPanelConnexion.Visibility = Visibility.Visible;
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCourseBorder.Visibility = Visibility.Hidden;
+            lbTitreSelectionnercourse.Visibility = Visibility.Hidden;
 
             lbDeconnexion.Background = Brushes.HotPink;
             lbDeconnexion.TextDecorations = TextDecorations.Underline;
@@ -283,6 +292,7 @@ namespace SAE_201_MARATHON
 
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCourseBorder.Visibility = Visibility.Hidden;
+            lbTitreSelectionnercourse.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Hidden;
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
@@ -319,6 +329,7 @@ namespace SAE_201_MARATHON
         {
             RechercheCourse.Visibility = Visibility.Visible;
             RechercheCourseBorder.Visibility = Visibility.Visible;
+            lbTitreSelectionnercourse.Visibility = Visibility.Visible;
 
             stackPanelConnexion.Visibility = Visibility.Hidden;
             RechercheCoureurs.Visibility = Visibility.Hidden;
@@ -354,6 +365,7 @@ namespace SAE_201_MARATHON
             SelectionCoureurs.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCourseBorder.Visibility = Visibility.Hidden;
+            lbTitreSelectionnercourse.Visibility = Visibility.Hidden;
             stackPanelConnexion.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
@@ -384,6 +396,7 @@ namespace SAE_201_MARATHON
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCourseBorder.Visibility = Visibility.Hidden;
+            lbTitreSelectionnercourse.Visibility = Visibility.Hidden;
             stackPanelConnexion.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
             ConfirmationInscription.Visibility = Visibility.Hidden;
@@ -413,6 +426,7 @@ namespace SAE_201_MARATHON
             ListeRechercheCoureurs.Visibility = Visibility.Hidden;
             RechercheCourse.Visibility = Visibility.Hidden;
             RechercheCourseBorder.Visibility = Visibility.Hidden;
+            lbTitreSelectionnercourse.Visibility = Visibility.Hidden;
             stackPanelConnexion.Visibility = Visibility.Hidden;
             gridCourse.Visibility = Visibility.Hidden;
 

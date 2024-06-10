@@ -127,6 +127,9 @@
             </Button>
         </StackPanel>
 
+        <Label Name="lbTitreSelectionnercourse" Visibility="Hidden" Foreground="Black" Grid.Row="1" Content="Sélectionner une course" 
+               FontSize="34" Margin="20,10,0,350" FontWeight="Bold" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
         <Border 
             x:Name="RechercheCourseBorder" 
             Visibility="Hidden" 
@@ -140,7 +143,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel x:Name="RechercheCourse"
-                        Visibility="Hidden" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,0">
+                        Visibility="Visible" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,0">
                 <Label Foreground="White" Content="S_électionner la course" Target="{Binding ElementName=choixCourse}" Margin="0,5,0,0" FontSize="16" />
                 <ComboBox x:Name="choixCourse" FontSize="14" SelectionChanged="ContenuMontant">
                     <ComboBoxItem Name="choixMarathon" Content="Marathon" />
@@ -262,14 +265,10 @@
                         <GradientStop Color="#FFEDCDCD" Offset="1"/>
                     </LinearGradientBrush>
                 </ComboBox.Background>
-                <ComboBoxItem Content="Fédération Française de Football" />
-                <ComboBoxItem Content="Fédération Française de Rugby" />
-                <ComboBoxItem Content="Fédération Française d'Athlétisme" />
-                <ComboBoxItem Content="Fédération Française d'Équitation" />
-                <ComboBoxItem Content="Fédération Française de Golf" />
-                <ComboBoxItem Content="Fédération Française de Handball" />
-                <ComboBoxItem Content="Fédération Française de Tennis" />
-                <ComboBoxItem Content="Fédération Française de Ski" />
+                <ComboBoxItem Content="Fédération Française Athlétisme" />
+                <ComboBoxItem Content="Fédération Française Cyclisme" />
+                <ComboBoxItem Content="Fédération Française Tennis" />
+                <ComboBoxItem Content="Fédération Française Golf" />
             </ComboBox>
             <Label 
                 Content="Selectionner les coureurs" 
@@ -332,11 +331,6 @@
             </Border>
 
             <Grid Height="80" HorizontalAlignment="Stretch" Margin="0,10,0,0">
-                <!--<Button
-                    Height="30"
-                    Margin="220,13,32,16"
-                    Click="Button_Suivant_2"
-                    Content="Suivant" FontSize="14" />-->
 
                 <Button
                     Height="40"
@@ -483,16 +477,62 @@
                 BorderThickness="1" />
             <Grid Height="74" HorizontalAlignment="Stretch">
                 <Button
+                    Height="30"
+                    Width="180"
                     FontWeight="Bold"
                     Margin="250,20,20,25"
                     Click="Button_Confirmer"
-                    Content=" Confirmer l'inscription " FontSize="16" Foreground="Red" HorizontalAlignment="Center" />
+                    Content=" Confirmer l'inscription " FontSize="16" Foreground="Red" HorizontalAlignment="Center">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="1,1,1,1" 
+                                CornerRadius="15">
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
                 <Button
-                    Width="75"
+                    Width="85"
                     Height="30"
                     Margin="20,20,350,25"
                     Click="Button_Precedent_3"
-                    Content="Precedent" FontSize="14" HorizontalAlignment="Center" />
+                    Content="Precedent" 
+                    FontSize="14" 
+                    FontWeight="Bold"
+                    Foreground="White"
+                    HorizontalAlignment="Center">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF232323"/>
+                            <GradientStop Color="#FF878787" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF390E7A"/>
+                            <GradientStop Color="#FF5B4879" Offset="1"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="3,3,3,3" 
+                                CornerRadius="15">
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </Grid>
         </StackPanel>
         <Grid
